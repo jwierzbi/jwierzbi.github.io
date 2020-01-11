@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block html_lang %}{{ article.lang }}{% endblock %}
+
+{% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
+
+{% block head %}
+{{ super() }}
+
+  {% import 'translations.html' as translations with context %}
+  {% if translations.entry_hreflang(article) %}
+  {{ translations.entry_hreflang(article) }}
+  {% endif %}
+
+  {% if article.description %}
+  <meta name="description" content="{{article.description}}" />
+  {% endif %}
+
+  {% for tag in article.tags %}
+  <meta name="tags" content="{{tag}}" />
+  {% endfor %}
+{% endblock %}
+
+{% block content %}
+<section class="section articles">
+  <div class="container">
+    <article class="card article">
+      <div class="card-content">
+        <div class="article-header">
+          <div class="has-text-centered">
+            <h2 class="title article-title">
+  {% if article.category %}
+              <a href="{{ SITEURL }}/{{ article.category.url }}">
+                {{ article.category }}
+              </a> /
+  {% endif %}
+              <a href="{{ SITEURL }}/{{ article.url }}"
+                 rel="bookmark"
+                 title="Permalink to {{ article.title|striptags }}">
+                {{ article.title }}
+              </a>
+            </h2>
+  {% import 'translations.html' as translations with context %}
+    {% if translations.translations_for(article) %}
+            <p class="subtitle is-6 article-subtitle">
+              {{ translations.translations_for(article) }}
+            </p>
+    {% endif %} {# translations.translations_for(article) #}
+            <p class="subtitle is-6 article-subtitle">
+  {% if article.authors %}
+    {% for author in article.authors %}
+              <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>,
+    {% endfor %} {# author in article.authors #}
+  {% endif %} {# article.authors #}
+              on
+              <time class="published" datetime="{{ article.date.isoformat() }}">
+                {{ article.locale_date }}
+              </time>
+  {% if article.modified %}
+              (modified
+              <time class="modified" datetime="{{ article.modified.isoformat() }}">
+                {{ article.locale_modified }}
+              </time>)
+  {% endif %} {# article.modified #}
+            </p>
+          </div>
+  {% if article.tags %}
+          <div class="tags are-medium is-centered">
+    {% for tag in article.tags %}
+            <span class="tag is-link is-light">
+              <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+            </span>
+    {% endfor %}
+          </div>
+  {% endif %} {# article.tags #}
+        </div>
+        <div class="content article-body">
+          {{ article.content }}
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+{% endblock %}

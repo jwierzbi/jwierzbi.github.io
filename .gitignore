@@ -1,0 +1,8 @@
+# Python
+
+.python-version
+__pycache__
+
+# temporary ignore
+
+output

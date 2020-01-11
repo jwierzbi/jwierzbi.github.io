@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITENAME }} - Categories{% endblock %}
+
+{% block content_title %}Categories{% endblock content_title %}
+
+{% block content %}
+<section class="section articles">
+  <div class="container">
+    <article class="card article">
+      <div class="card-content">
+        <div class="content article-body">
+          <ul>
+  {% for category, articles in categories|sort %}
+            <li>
+              <a href="{{ SITEURL }}/{{ category.url }}">
+                {{ category }}
+              </a> ({{ articles|count }})
+            </li>
+  {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+{% endblock %}

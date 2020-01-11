@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+<head>
+{% block head %}
+  <meta charset="utf-8">
+  {% if FEED_ALL_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
+        type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+  {% endif %}
+  {% if FEED_ALL_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
+        type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+  {% endif %}
+  {% if FEED_ATOM %}
+  <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}"
+        type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+  {% endif %}
+  {% if FEED_RSS %}
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}"
+        type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+  {% endif %}
+  {% if CATEGORY_FEED_ATOM and category %}
+  <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}{% endif %}"
+        type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+  {% endif %}
+  {% if CATEGORY_FEED_RSS and category %}
+  <link href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_RSS.format(slug=category.slug) }}{% endif %}"
+        type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+  {% endif %}
+  {% if TAG_FEED_ATOM and tag %}
+  <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_ATOM.format(slug=tag.slug) }}{% endif %}"
+        type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+  {% endif %}
+  {% if TAG_FEED_RSS and tag %}
+  <link href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}"
+        type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+  {% endif %}
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+
+  <link rel="icon" href="{{ SITEURL }}/theme/img/favicon.ico"
+        sizes="16x16 24x24 32x32 64x64 128x128" type="image/png">
+  <link href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="{{ SITEURL }}/theme/css/pygment.css" rel="stylesheet">
+  <link href="{{ SITEURL }}/theme/css/minimal.css" rel="stylesheet">
+
+  <script src="{{ SITEURL }}/theme/js/minimal.js"></script>
+{% endblock head %}
+</head>
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="{{ SITEURL }}/">
+          <img src="{{ SITEURL }}/theme/img/logo.png" alt="jaro.blog">
+        </a>
+        <span class="navbar-burger burger"
+              data-target="navbarMenu"
+              aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </span>
+      </div>
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item is-active" href="{{ SITEURL }}/">
+            Home
+          </a>
+{% for title, link in MENUITEMS %}
+          <a class="navbar-item" href="{{ link }}">
+            {{ title }}
+          </a>
+{% endfor %}
+{% if DISPLAY_PAGES_ON_MENU %}
+  {% for p in pages %}
+        <a class="navbar-item{% if p == page %} is-active{% endif %}"
+           href="{{ SITEURL }}/{{ p.url }}">
+          {{ p.title }}
+        </a>
+  {% endfor %}
+{% endif %}
+{% if DISPLAY_CATEGORIES_ON_MENU and categories %}
+        <div class="navbar-item has-dropdowns is-hoverable">
+          <a class="navbar-link">
+            Categories
+          </a>
+          <div class="navbar-dropdown">
+  {% for cat, null in categories %}
+            <a class="navbar-item{% if cat == category %} is-active{% endif %}"
+               href="{{ SITEURL }}/{{ cat.url }}">
+              {{ cat }}
+            </a>
+  {% endfor %}
+          </div>
+        </div>
+{% endif %}
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero is-info is-medium is-bold">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h1 class="title is-spaced">
+          {{ SITENAME }} <strong>{{ SITESUBTITLE }}</strong>
+        </h1>
+        <h2 class="subtitle">
+          {% block content_title %}{% endblock content_title %}
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  {% block content %}{% endblock %}
+
+  <footer class="footer">
+    <div class="social has-text-centered">
+      <a href="https://www.facebook.com/jwierzbi">
+        <i class="fa fa-facebook-square fa-2x" style="color: #4267b2;" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.instagram.com/wierzbicki.jaroslaw/">
+        <i class="fa fa-instagram fa-2x" style="color: #000;" aria-hidden="true"></i>
+      </a>
+      <a href="https://twitter.com/j_wierzbicki">
+        <i class="fa fa-twitter-square fa-2x" style="color: #1da1f2;" aria-hidden="true"></i>
+      </a>
+      <a href="https://github.com/jwierzbi">
+        <i class="fa fa-github-square fa-2x" style="color: #000;" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jaroslaw-wierzbicki-14845043">
+        <i class="fa fa-linkedin-square fa-2x" style="color: #0077b5;" aria-hidden="true"></i>
+      </a>
+    </div>
+    <div class="content has-text-centered">
+      <p>Copyright &copy; Jarosław Wierzbicki</p>
+    </div>
+  </footer>
+</body>
+</html>

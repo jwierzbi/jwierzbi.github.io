@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Iosevka Term Slab';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('../fonts/iosevka-term-slab-regular.woff');
+}
+
+html, body {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  background: #F0F2F4;
+}
+/* .hero-body {
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Plum_trees_Kitano_Tenmangu.jpg/1200px-Plum_trees_Kitano_Tenmangu.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+} */
+.articles {
+  margin: 5rem 0;
+  margin-top: -12rem;
+}
+.articles .content p {
+  line-height: 1.9;
+  margin: 15px 0;
+}
+.articles .paginator {
+  margin-top: 3rem;
+  text-align: center;
+}
+.article {
+  margin-top: 6rem;
+}
+.article-header {
+  margin-top: 3rem;
+}
+.article-title {
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 2;
+}
+.article-subtitle {
+  color: #909AA0;
+  margin-bottom: 3rem;
+}
+.article-body {
+  line-height: 1.4;
+  /* margin: 3rem 6rem; */
+  margin: 3rem 0rem;
+}
+
+.highlight pre {
+  font-family: 'Iosevka Term Slab', monospace;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  background: #272822;
+}
+
+.social {
+  margin: 10px;
+}
+.social a {
+  margin: 10px;
+}

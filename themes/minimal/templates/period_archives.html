@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ SITENAME }} - {{ period | reverse | join(' ') }} archives
+{% endblock %}
+
+{% block content_title %}
+Archives for {{ period | reverse | join(' ') }}
+{% endblock content_title %}
+
+{% block content %}
+<section class="section articles">
+  <div class="container">
+    <article class="card article">
+      <div class="card-content">
+        <div class="content article-body">
+          <dl>
+  {% for article in dates %}
+            <dt>{{ article.locale_date }}</dt>
+            <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+  {% endfor %}
+          </dl>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+{% endblock %}
