@@ -20,6 +20,13 @@
   {% endfor %}
 {% endblock %}
 
+{% block content_title %}
+  {% if article.category %}
+Category:
+<a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+  {% endif %}
+{% endblock content_title %}
+
 {% block content %}
 <section class="section articles">
   <div class="container">
@@ -28,11 +35,6 @@
         <div class="article-header">
           <div class="has-text-centered">
             <h2 class="title article-title">
-  {% if article.category %}
-              <a href="{{ SITEURL }}/{{ article.category.url }}">
-                {{ article.category }}
-              </a> /
-  {% endif %}
               <a href="{{ SITEURL }}/{{ article.url }}"
                  rel="bookmark"
                  title="Permalink to {{ article.title|striptags }}">

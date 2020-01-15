@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="15.776564mm"
-   height="15.776564mm"
-   viewBox="0 0 15.776564 15.776562"
+   width="16.176394mm"
+   height="16.176394mm"
+   viewBox="0 0 16.176394 16.176392"
    version="1.1"
    id="svg8"
    sodipodi:docname="favicon.svg"
@@ -28,18 +28,18 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="56.762329"
-     inkscape:cy="6.8318592"
+     inkscape:zoom="8"
+     inkscape:cx="27.43894"
+     inkscape:cy="29.634583"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:window-width="1562"
-     inkscape:window-height="1196"
-     inkscape:window-x="1751"
-     inkscape:window-y="172"
+     inkscape:window-width="1709"
+     inkscape:window-height="1086"
+     inkscape:window-x="1389"
+     inkscape:window-y="223"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata5">
@@ -57,9 +57,9 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-74.966305,-107.93876)">
+     transform="translate(-74.766391,-107.73884)">
     <rect
-       style="fill:#ffffff;fill-opacity:0.78431373;stroke:#000000;stroke-width:0.09017057;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="fill:#d0d0d0;fill-opacity:1;stroke:#3e3e3e;stroke-width:0.49000001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:normal"
        id="rect4543"
        width="15.686393"
        height="15.686393"
@@ -69,17 +69,19 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-       x="75.356316"
-       y="119.13433"
+       x="75.887054"
+       y="117.86591"
        id="text12"><tspan
          sodipodi:role="line"
          id="tspan10"
-         x="75.356316"
-         y="119.13433"
+         x="75.887054"
+         y="117.86591"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Iosevka Term SS03';-inkscape-font-specification:'Iosevka Term SS03';fill:#000000;stroke-width:0.26458332"><tspan
            style="fill:#1abc9c;fill-opacity:1"
-           id="tspan4873">$</tspan><tspan
+           id="tspan4873"><tspan
+   style="fill:#000000;fill-opacity:0.78431373"
+   id="tspan852">j</tspan>$</tspan><tspan
            id="tspan4539"
-           style="fill:#000000;fill-opacity:0.78431373"> j</tspan></tspan></text>
+           style="fill:#000000;fill-opacity:0.78431373" /></tspan></text>
   </g>
 </svg>

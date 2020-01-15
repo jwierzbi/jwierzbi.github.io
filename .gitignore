@@ -3,6 +3,8 @@
 .python-version
 __pycache__
 
-# temporary ignore
+# project
 
+.vscode
 output
+plugins

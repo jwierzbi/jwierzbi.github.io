@@ -8,30 +8,20 @@
 
 html, body {
   font-family: Roboto, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   background: #F0F2F4;
 }
-/* .hero-body {
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Plum_trees_Kitano_Tenmangu.jpg/1200px-Plum_trees_Kitano_Tenmangu.jpg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 500px;
-} */
-.articles {
-  margin: 5rem 0;
-  margin-top: -12rem;
+.hero-body {
+  background-color: #fafafa;
 }
 .articles .content p {
   line-height: 1.9;
   margin: 15px 0;
+  text-align: justify;
 }
 .articles .paginator {
   margin-top: 3rem;
   text-align: center;
-}
-.article {
-  margin-top: 6rem;
 }
 .article-header {
   margin-top: 3rem;
@@ -47,7 +37,6 @@ html, body {
 }
 .article-body {
   line-height: 1.4;
-  /* margin: 3rem 6rem; */
   margin: 3rem 0rem;
 }
 
@@ -55,7 +44,6 @@ html, body {
   font-family: 'Iosevka Term Slab', monospace;
   font-size: 1rem;
   -webkit-font-smoothing: antialiased;
-  background: #272822;
 }
 
 .social {

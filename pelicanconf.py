@@ -7,7 +7,11 @@ SITENAME = 'jaro.blog'
 SITEURL = ''
 
 PATH = 'content'
+ARTICLE_PATHS = ['blog']
 THEME = 'themes/minimal'
+
+ARTICLE_URL = 'blog/{slug}.html'
+ARTICLE_SAVE_AS = 'blog/{slug}.html'
 
 TIMEZONE = 'Asia/Taipei'
 
@@ -46,6 +50,11 @@ STATIC_PATHS = [
 EXTRA_PATH_METADATA = {
     'extra/CNAME': {'path': 'CNAME'}
 }
+
+# Plugins
+
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['summary', 'css-html-js-minify']
 
 # Pygments
 

@@ -12,10 +12,12 @@
   {% endif %}
 {% endblock %}
 
+{% block header %}{% endblock header %}
+
 {% block content %}
 <section class="section">
   <div class="container">
-    <h2 class="title">{{ page.title }}</h2>
+    <h2 class="title has-text-centered">{{ page.title }}</h2>
   {% import 'translations.html' as translations with context %}
     {{ translations.translations_for(page) }}
 
