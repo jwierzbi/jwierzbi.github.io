@@ -56,16 +56,5 @@ EXTRA_PATH_METADATA = {
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['summary', 'css-html-js-minify']
 
-# Pygments
-
-MARKDOWN = {
-    'extension_configs': {
-        'markdown.extensions.codehilite': {
-            'css_class': 'highlight',
-            'linenums': None
-        }
-    }
-}
-
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

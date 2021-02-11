@@ -11,6 +11,7 @@ html, body {
   font-size: 16px;
   background: #F0F2F4;
 }
+
 .hero-body {
   background-color: #fafafa;
 }
@@ -39,6 +40,18 @@ html, body {
   line-height: 1.4;
   margin: 3rem 0rem;
 }
+.article-body .section {
+  padding: 1.5rem 0;
+}
+.article-body .section dd {
+  margin-bottom: 15px;
+}
+.article-body .section dd p.first {
+  margin-top: 0;
+}
+.article-body .section dd p.last {
+  margin-bottom: 0;
+}
 
 .highlight pre {
   font-family: 'Iosevka Term Slab', monospace;
@@ -46,6 +59,15 @@ html, body {
   color: inherit;
   background-color: inherit;
   -webkit-font-smoothing: antialiased;
+}
+
+.content table.footnote {
+  margin: 0;
+  table-layout: fixed;
+  width: 100%;
+}
+.content table.footnote col {
+  width: 30px;
 }
 
 .social {
