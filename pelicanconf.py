@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Jarosław Wierzbicki'
 SITENAME = 'jaro.blog'
-SITEURL = ''
+SITEURL = 'https://jaro.blog'
 
 PATH = 'content'
 ARTICLE_PATHS = ['blog']
@@ -54,7 +54,7 @@ EXTRA_PATH_METADATA = {
 # Plugins
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['summary', 'css-html-js-minify']
+PLUGINS = ['summary', 'css-html-js-minify', 'seo']
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
