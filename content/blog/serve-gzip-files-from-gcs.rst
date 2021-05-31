@@ -45,7 +45,7 @@ unfortunately GCS, as I mentioned, doesn't do this.
 
 So how to do it in GCS, you might ask. Turns out Google makes it extremely easy
 to compress files upon uploading using their
-`:gsutil <https://cloud.google.com/storage/docs/gsutil>`_ tool.
+`gsutil <https://cloud.google.com/storage/docs/gsutil>`_ tool.
 
 There are two ways to upload multiple files at a time to Google Cloud Storage
 using the :code:`gsutil` command. The first is to use :code:`rsync` and the
@@ -94,7 +94,7 @@ then you'll need to find a way to do it in your particular case by yourself):
 
 and checking (for example, by using the web browser's development tools) if the
 response contains :code:`content-encoding: gzip` and
-:code:`content-type: text/css` (for CSS) headers, e.g.:
+:code:`content-type: application/javascript` (for JS) headers, e.g.:
 
 .. image:: {attach}images/gcs_gzip_resp.png
    :alt: GCS response headers.

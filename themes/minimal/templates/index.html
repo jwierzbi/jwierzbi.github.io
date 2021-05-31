@@ -3,25 +3,23 @@
 {% block content_title %}Blog{% endblock content_title %}
 
 {% block content %}
-<section class="section articles">
+<section class="section article-list">
   <div class="container">
   {% for article in articles_page.object_list %}
-    <article class="card article">
+    <article class="card article article-list-element">
       <div class="card-content">
-        <div class="article-header">
-          <div class="has-text-centered">
-            <h2 class="title article-title">
-              <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
-            </h2>
-            <p class="subtitle is-6 article-subtitle">
+        <div class="article-header has-text-centered">
+          <h2 class="title article-title">
+            <a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+          </h2>
+          <p class="subtitle is-6 article-subtitle">
     {% for author in article.authors %}
-              <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>,
+            <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>,
     {% endfor %} {# author in article.authors #}
-              on {{ article.locale_date }}
-            </p>
-          </div>
+            on {{ article.locale_date }}
+          </p>
         </div>
-        <div class="content article-body">
+        <div class="article-list-body">
           {{ article.summary }}
         </div>
       </div>

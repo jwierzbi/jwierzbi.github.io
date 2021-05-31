@@ -15,6 +15,43 @@ html, body {
 .hero-body {
   background-color: #fafafa;
 }
+
+/* article list */
+
+@media only screen and (max-width: 768px) {
+  .section.article-list {
+    padding: 0;
+  }
+  .section.articles {
+    padding: 0;
+  }
+  .card {
+    box-shadow: none;
+  }
+}
+
+.article-list .content p {
+  line-height: 1.9;
+  margin: 15px 0;
+  text-align: justify;
+}
+
+.article-list-element:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.article-list-body {
+  line-height: 180%;
+  margin: 3rem 0rem;
+}
+
+.article-list-body p {
+  margin: 0.8rem 0;
+  text-align: justify;
+}
+
+/* aticle */
+
 .articles .content p {
   line-height: 1.9;
   margin: 15px 0;
@@ -41,7 +78,7 @@ html, body {
   margin: 3rem 0rem;
 }
 .article-body .section {
-  padding: 1.5rem 0;
+  padding: 1.5rem 0 0 0;
 }
 .article-body .section dd {
   margin-bottom: 15px;
@@ -51,6 +88,12 @@ html, body {
 }
 .article-body .section dd p.last {
   margin-bottom: 0;
+}
+
+.formula {
+  text-align: center;
+  font-family: monospace;
+  font-size: 1.2rem;
 }
 
 .highlight pre {
@@ -75,4 +118,10 @@ html, body {
 }
 .social a {
   margin: 10px;
+}
+
+.footnotes {
+  overflow-x: auto;
+  list-style: none;
+  margin-left: 1rem !important;
 }

@@ -89,9 +89,9 @@
 {% endif %}
 {% if DISPLAY_CATEGORIES_ON_MENU and categories %}
         <div class="navbar-item has-dropdowns is-hoverable">
-          <a class="navbar-link">
+          <span class="navbar-link">
             Categories
-          </a>
+          </span>
           <div class="navbar-dropdown">
   {% for cat, null in categories %}
             <a class="navbar-item{% if cat == category %} is-active{% endif %}"
