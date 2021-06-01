@@ -1,52 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>jaro.blog - Web development</title><link href="https://jaro.blog/" rel="alternate"></link><link href="https://jaro.blog/feeds/web-development.atom.xml" rel="self"></link><id>https://jaro.blog/</id><updated>2020-01-14T00:00:00+08:00</updated><entry><title>Serving compressed files from Google Cloud Storage</title><link href="https://jaro.blog/blog/serve-gzip-files-from-gcs.html" rel="alternate"></link><published>2020-01-14T00:00:00+08:00</published><updated>2020-01-14T00:00:00+08:00</updated><author><name>Jarosław Wierzbicki</name></author><id>tag:jaro.blog,2020-01-14:/blog/serve-gzip-files-from-gcs.html</id><summary type="html">&lt;p&gt;Recently I’ve been looking into some ways to optimise the loading speed of a website that I’m working on. One of the possible improvements suggested by Chromium’s &lt;a href="https://developers.google.com/web/tools/lighthouse"&gt;Audit&lt;/a&gt; tool was to &lt;a href="https://web.dev/uses-text-compression"&gt;enable text  compression&lt;/a&gt;. An obvious thing to do, one might say, but the question is not whether to do it at all but rather how to do it.&lt;/p&gt;
-&lt;p&gt;Let’s start from the beginning though. The idea is simple. Instead of serving plain text files like CSS and JavaScript to the browser, those files should be sent compressed so that the browser, upon receiving them, can decompress them to a plain text format. There is, of course, a CPU time cost to this approach but in most cases the savings from the data transfer outweigh it by a large margin.&lt;sup&gt;&lt;a href="#r1"&gt;1&lt;/a&gt;&lt;/sup&gt; This is particularly true for mobile devices where the bandwidth is often limited.&lt;/p&gt;
-&lt;p&gt;Many servers nowadays support compression (be that dynamic or static) and there are plenty of resources describing how to enable it but for some reason I couldn’t quickly find information on how exactly to do it for Google Cloud Storage.&lt;/p&gt;
-</summary><content type="html">&lt;p&gt;Recently I’ve been looking into some ways to optimise the loading speed of a website that I’m working on. One of the possible improvements suggested by Chromium’s &lt;a href="https://developers.google.com/web/tools/lighthouse"&gt;Audit&lt;/a&gt; tool was to &lt;a href="https://web.dev/uses-text-compression"&gt;enable text  compression&lt;/a&gt;. An obvious thing to do, one might say, but the question is not whether to do it at all but rather how to do it.&lt;/p&gt;
-&lt;p&gt;Let’s start from the beginning though. The idea is simple. Instead of serving plain text files like CSS and JavaScript to the browser, those files should be sent compressed so that the browser, upon receiving them, can decompress them to a plain text format. There is, of course, a CPU time cost to this approach but in most cases the savings from the data transfer outweigh it by a large margin.&lt;sup&gt;&lt;a href="#r1"&gt;1&lt;/a&gt;&lt;/sup&gt; This is particularly true for mobile devices where the bandwidth is often limited.&lt;/p&gt;
-&lt;p&gt;Many servers nowadays support compression (be that dynamic or static) and there are plenty of resources describing how to enable it but for some reason I couldn’t quickly find information on how exactly to do it for Google Cloud Storage.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>jaro.blog - Web development</title><link href="https://jaro.blog/" rel="alternate"></link><link href="https://jaro.blog/feeds/web-development.atom.xml" rel="self"></link><id>https://jaro.blog/</id><updated>2020-01-14T00:00:00+08:00</updated><entry><title>Serving compressed files from Google Cloud Storage</title><link href="https://jaro.blog/blog/serve-gzip-files-from-gcs.html" rel="alternate"></link><published>2020-01-14T00:00:00+08:00</published><updated>2020-01-14T00:00:00+08:00</updated><author><name>Jarosław Wierzbicki</name></author><id>tag:jaro.blog,2020-01-14:/blog/serve-gzip-files-from-gcs.html</id><summary type="html">&lt;p&gt;Recently I’ve been looking into some ways to optimise the loading speed
+of a website that I’m working on. One of the possible improvements suggested
+by Chromium’s &lt;a class="reference external" href="https://developers.google.com/web/tools/lighthouse"&gt;Audit&lt;/a&gt; tool
+was to &lt;a class="reference external" href="https://web.dev/uses-text-compression"&gt;enable text  compression&lt;/a&gt;.
+An obvious thing to do, one might say, but the question is not whether to do it
+at all but rather how to do it.&lt;/p&gt;
+&lt;p&gt;Let’s start from the beginning though. The idea is simple. Instead of serving
+plain text files like CSS and JavaScript to the browser, those files should be
+sent compressed so that the browser, upon receiving them, can decompress them
+to a plain text format. There is, of course, a CPU time cost to this approach
+but in most cases the savings from the data transfer outweigh it by a large
+margin &lt;a class="footnote-reference" href="#id5" id="id1"&gt;[1]&lt;/a&gt;. This is particularly true for mobile devices where the bandwidth
+is often limited.&lt;/p&gt;
+&lt;p&gt;Many servers nowadays support compression (be that dynamic or static) and there
+are plenty of resources describing how to enable it but for some reason I
+couldn’t quickly find information on how exactly to do it for Google Cloud
+Storage.&lt;/p&gt;
+</summary><content type="html">&lt;p&gt;Recently I’ve been looking into some ways to optimise the loading speed
+of a website that I’m working on. One of the possible improvements suggested
+by Chromium’s &lt;a class="reference external" href="https://developers.google.com/web/tools/lighthouse"&gt;Audit&lt;/a&gt; tool
+was to &lt;a class="reference external" href="https://web.dev/uses-text-compression"&gt;enable text  compression&lt;/a&gt;.
+An obvious thing to do, one might say, but the question is not whether to do it
+at all but rather how to do it.&lt;/p&gt;
+&lt;p&gt;Let’s start from the beginning though. The idea is simple. Instead of serving
+plain text files like CSS and JavaScript to the browser, those files should be
+sent compressed so that the browser, upon receiving them, can decompress them
+to a plain text format. There is, of course, a CPU time cost to this approach
+but in most cases the savings from the data transfer outweigh it by a large
+margin &lt;a class="footnote-reference" href="#id5" id="id1"&gt;[1]&lt;/a&gt;. This is particularly true for mobile devices where the bandwidth
+is often limited.&lt;/p&gt;
+&lt;p&gt;Many servers nowadays support compression (be that dynamic or static) and there
+are plenty of resources describing how to enable it but for some reason I
+couldn’t quickly find information on how exactly to do it for Google Cloud
+Storage.&lt;/p&gt;
 
-
-&lt;h3&gt;Google Cloud Storage&lt;/h3&gt;
-&lt;p&gt;&lt;a href="https://cloud.google.com/storage/"&gt;Google Cloud Storage&lt;/a&gt; (GCS) by default serves files uncompressed. There is however an option to enable &lt;a href="https://en.wikipedia.org/wiki/Gzip"&gt;gzip&lt;/a&gt; compression for selected files. There is a catch though. It’s only possible to use static compression which means that the files need to be uploaded already compressed to the storage. Some servers allow you to use dynamic compression which means that they will compress files on the fly when the files are requested by a client but unfortunately GCS, as I mentioned, doesn't do this.&lt;/p&gt;
-&lt;p&gt;So how to do it in GCS, you might ask. Turns out Google makes it extremely easy to compress files upon uploading using their &lt;a href="https://cloud.google.com/storage/docs/gsutil"&gt;&lt;code&gt;gsutil&lt;/code&gt;&lt;/a&gt; tool.&lt;/p&gt;
-&lt;p&gt;There are two ways to upload multiple files at a time to Google Cloud Storage using the &lt;code&gt;gsutil&lt;/code&gt; command. The first is to use &lt;code&gt;rsync&lt;/code&gt; and the other one is to use the &lt;code&gt;cp&lt;/code&gt; sub-command.&lt;sup&gt;&lt;a href="#r2"&gt;2&lt;/a&gt;&lt;/sup&gt; Usually &lt;code&gt;rsync&lt;/code&gt; is more convenient but in this case we need to use &lt;code&gt;cp&lt;/code&gt; because the former doesn’t support compressing files during the upload (well that’s not exactly true, read further what the &lt;code&gt;-j&lt;/code&gt; option does and why it's not applicable here).&lt;/p&gt;
+&lt;div class="section" id="google-cloud-storage"&gt;
+&lt;h2&gt;Google Cloud Storage&lt;/h2&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://cloud.google.com/storage/"&gt;Google Cloud Storage&lt;/a&gt; (GCS) by default
+serves files uncompressed. There is however an option to enable
+&lt;a class="reference external" href="https://en.wikipedia.org/wiki/Gzip"&gt;gzip&lt;/a&gt; compression for selected files.
+There is a catch though. It’s only possible to use static compression which
+means that the files need to be uploaded already compressed to the storage.
+Some servers allow you to use dynamic compression which means that they will
+compress files on the fly when the files are requested by a client but
+unfortunately GCS, as I mentioned, doesn't do this.&lt;/p&gt;
+&lt;p&gt;So how to do it in GCS, you might ask. Turns out Google makes it extremely easy
+to compress files upon uploading using their
+&lt;a class="reference external" href="https://cloud.google.com/storage/docs/gsutil"&gt;gsutil&lt;/a&gt; tool.&lt;/p&gt;
+&lt;p&gt;There are two ways to upload multiple files at a time to Google Cloud Storage
+using the &lt;code&gt;gsutil&lt;/code&gt; command. The first is to use &lt;code&gt;rsync&lt;/code&gt; and the
+other one is to use the &lt;code&gt;cp&lt;/code&gt; sub-command &lt;a class="footnote-reference" href="#id6" id="id3"&gt;[2]&lt;/a&gt;. Usually &lt;code&gt;rsync&lt;/code&gt;
+is more convenient but in this case we need to use &lt;cite&gt;cp&lt;/cite&gt; because the former
+doesn’t support compressing files during the upload (well that’s not exactly
+true, read further what the &lt;code&gt;-j&lt;/code&gt; option does and why it's not applicable
+here).&lt;/p&gt;
 &lt;p&gt;Let's get to business. Using the &lt;code&gt;cp&lt;/code&gt; sub-command is really easy, e.g.:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ gsutil -m cp -z css,js,map &lt;span class="o"&gt;[&lt;/span&gt;LOCAL_DIR&lt;span class="o"&gt;]&lt;/span&gt; gs://&lt;span class="o"&gt;[&lt;/span&gt;BUCKET&lt;span class="o"&gt;]&lt;/span&gt;/&lt;span class="o"&gt;[&lt;/span&gt;REMOTE_DIR&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Let’s break it down:&lt;/p&gt;
-&lt;dl&gt;
+&lt;dl class="docutils"&gt;
 &lt;dt&gt;&lt;code&gt;-m&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;This option tells the `cp` sub-command to run in parallel. While this is not really needed here, it can greatly shorten the upload time so it's a good idea to use it.&lt;/dd&gt;
-
-&lt;dt&gt;&lt;code&gt;-z [ext,...]&lt;/code&gt;&lt;dt&gt;
-&lt;dd&gt;Causes all files with given extensions to be compressed before the upload and keeps them like that afterwards (this is how it differs from the &lt;code&gt;-j&lt;/code&gt; option which only compresses files for the duration of the upload process and decompresses them at the destination).&lt;br&gt;
-Beyond compressing of the files, the command will also apply the required attributes to the stored files needed to properly serve them compressed.&lt;sup&gt;&lt;a href="#r3"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;br&gt;
-In our example, all CSS, JS and MAP files will be stored compressed (using gzip).&lt;/dd&gt;
-
+&lt;dd&gt;This option tells the &lt;code&gt;cp&lt;/code&gt; sub-command to run in parallel. While this
+is not really needed here, it can greatly shorten the upload time so it's
+a good idea to use it.&lt;/dd&gt;
+&lt;dt&gt;&lt;code&gt;-z [ext,...]&lt;/code&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p class="first"&gt;Causes all files with given extensions to be compressed before the upload
+and keeps them like that afterwards (this is how it differs from
+the &lt;code&gt;-j&lt;/code&gt; option which only compresses files for the duration
+of the upload process and decompresses them at the destination).&lt;/p&gt;
+&lt;p class="last"&gt;Beyond compressing of the files, the command will also apply the required
+attributes to the stored files needed to properly serve them compressed
+&lt;a class="footnote-reference" href="#id7" id="id4"&gt;[3]&lt;/a&gt;. In our example, all CSS, JS and MAP files will be stored compressed
+(using gzip).&lt;/p&gt;
+&lt;/dd&gt;
 &lt;dt&gt;&lt;code&gt;LOCAL_DIR&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;The directory path to the files we want to upload to Google Cloud Storage.&lt;dd&gt;
-
+&lt;dd&gt;The directory path to the files we want to upload to Google Cloud Storage.&lt;/dd&gt;
 &lt;dt&gt;&lt;code&gt;BUCKET&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;Name of the Google Cloud Storage bucket.&lt;dd&gt;
-
+&lt;dd&gt;Name of the Google Cloud Storage bucket.&lt;/dd&gt;
 &lt;dt&gt;&lt;code&gt;REMOTE_DIR&lt;/code&gt;&lt;/dt&gt;
-&lt;dd&gt;Remote directory in the bucket that the files will be copied to.&lt;dd&gt;
+&lt;dd&gt;Remote directory in the bucket that the files will be copied to.&lt;/dd&gt;
 &lt;/dl&gt;
-
-&lt;p&gt;If you have public access configured to your bucket, you can test if the files are served compressed by opening a link to one of them in your browser (if not, then you'll need to find a way to do it in your particular case by yourself):&lt;/p&gt;
+&lt;p&gt;If you have public access configured to your bucket, you can test if the files
+are served compressed by opening a link to one of them in your browser (if not,
+then you'll need to find a way to do it in your particular case by yourself):&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;https://storage.googleapis.com/[BUCKET_NAME]/[FILE_PATH]
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;and checking (for example, by using the web browser's development tools) if the response contains &lt;code&gt;content-encoding: gzip&lt;/code&gt; and &lt;code&gt;content-type: text/css&lt;/code&gt; (for CSS) headers, e.g.:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="GCS Response Header with GZIP" src="https://jaro.blog/blog/images/gcs_gzip_resp.png" /&gt;&lt;/p&gt;
-&lt;p&gt;If it does, then all is working as intended and we're home. That’s it, so simple, isn’t it?&lt;/p&gt;
-&lt;h3&gt;Conclusion&lt;/h3&gt;
-&lt;p&gt;Gzip compression of static files can significantly speed up loading of your website especially if it’s a fairly complex one with a lot of CSS and JS files. Luckily, if you’re using Google Cloud Storage, there’s really very little work needed to make it happen. Adding only one option to the 'gsutil' command can make your website load noticeably faster. There’s really no argument not do it. ;)&lt;/p&gt;
-&lt;h3&gt;Further Reading&lt;/h3&gt;
-&lt;p&gt;&lt;a name="r1"&gt;[1]&lt;/a&gt; &lt;a href="https://royal.pingdom.com/can-gzip-compression-really-improve-web-performance/"&gt;Can gzip Compression Really Improve Web Performance?&lt;/a&gt;&lt;br&gt;
-&lt;a name="r2"&gt;[2]&lt;/a&gt; &lt;a href="https://cloud.google.com/storage/docs/transcoding"&gt;Transcoding of gzip-compressed files&lt;/a&gt;&lt;br&gt;
-&lt;a name="r3"&gt;[3]&lt;/a&gt; &lt;a href="https://cloud.google.com/storage/docs/gsutil/commands/cp"&gt;gsutil cp command documentation&lt;/a&gt;&lt;/p&gt;</content><category term="Web development"></category><category term="Google Cloud Storage"></category><category term="gzip"></category><category term="tips&amp;tricks"></category></entry></feed>
+&lt;p&gt;and checking (for example, by using the web browser's development tools) if the
+response contains &lt;code&gt;content-encoding: gzip&lt;/code&gt; and
+&lt;code&gt;content-type: application/javascript&lt;/code&gt; (for JS) headers, e.g.:&lt;/p&gt;
+&lt;img alt="GCS response headers." src="https://jaro.blog/blog/images/gcs_gzip_resp.png" /&gt;
+&lt;p&gt;If it does, then all is working as intended and we're home. That’s it,
+so simple, isn’t it?&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="conclusion"&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Gzip compression of static files can significantly speed up loading of your
+website especially if it’s a fairly complex one with a lot of CSS and JS files.
+Luckily, if you’re using Google Cloud Storage, there’s really very little work
+needed to make it happen. Adding only one option to the &lt;code&gt;gsutil&lt;/code&gt; command
+can make your website load noticeably faster. There’s really no argument not do
+it. 😉&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="section" id="further-reading"&gt;
+&lt;h2&gt;Further Reading&lt;/h2&gt;
+&lt;ul class="footnotes"&gt;
+    &lt;li&gt;
+        &lt;span class="docutils footnote" id="id5"&gt;
+            &lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;
+        &lt;/span&gt;
+        &lt;span&gt;
+            &lt;a class="reference external" href="https://royal.pingdom.com/can-gzip-compression-really-improve-web-performance/"&gt;Can gzip Compression Really Improve Web Performance?&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span class="docutils footnote" id="id6"&gt;
+            &lt;a class="fn-backref" href="#id3"&gt;[2]&lt;/a&gt;
+        &lt;/span&gt;
+        &lt;span&gt;
+            &lt;a class="reference external" href="https://cloud.google.com/storage/docs/transcoding"&gt;Transcoding of gzip-compressed files&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span class="docutils footnote" id="id7"&gt;
+            &lt;a class="fn-backref" href="#id4"&gt;[3]&lt;/a&gt;
+        &lt;/span&gt;
+        &lt;span&gt;
+            &lt;a class="reference external" href="https://cloud.google.com/storage/docs/gsutil/commands/cp"&gt;gsutil cp command documentation&lt;/a&gt;
+        &lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+</content><category term="Web development"></category><category term="Google Cloud Storage"></category><category term="gzip"></category><category term="tips&amp;tricks"></category></entry></feed>
