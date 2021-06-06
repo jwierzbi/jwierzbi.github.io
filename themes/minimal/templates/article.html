@@ -34,13 +34,13 @@ Category:
       <div class="card-content">
         <div class="article-header">
           <div class="has-text-centered">
-            <h2 class="title article-title">
+            <h1 class="title article-title">
               <a href="{{ SITEURL }}/{{ article.url }}"
                  rel="bookmark"
                  title="Permalink to {{ article.title|striptags }}">
                 {{ article.title }}
               </a>
-            </h2>
+            </h1>
   {% import 'translations.html' as translations with context %}
     {% if translations.translations_for(article) %}
             <p class="subtitle is-6 article-subtitle">
