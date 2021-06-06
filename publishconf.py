@@ -19,6 +19,32 @@ CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
+# External domain for GitHub
+
+EXTRA_PATH_METADATA = {
+    'extra/CNAME': {'path': 'CNAME'}
+}
+
 # Following items are often useful when publishing
 
 INSIGHTS_ANALYTICS = 'HXqdOSbsoDR9nzGe'
+
+# Plugins
+
+PLUGINS += ['css-html-js-minify', 'seo', 'sitemap']
+
+## Sitemap Plugin
+
+SITEMAP = {
+    'format': 'xml',
+    "changefreqs": {
+        "articles": "monthly",
+        "indexes": "weekly",
+        "pages": "monthly"
+    },
+    'exclude': [
+        r'^tag/.*$',
+        r'^category/.*$',
+        r'^author/.*$'
+    ]
+}

@@ -47,14 +47,10 @@ STATIC_PATHS = [
     'extra/CNAME'
 ]
 
-EXTRA_PATH_METADATA = {
-    'extra/CNAME': {'path': 'CNAME'}
-}
-
 # Plugins
 
 PLUGIN_PATHS = ['plugins']
-PLUGINS = ['summary', 'css-html-js-minify', 'seo', 'rstfootnotes']
+PLUGINS = ['summary', 'rstfootnotes']
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
