@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>jaro.blog - Web development</title><link href="https://jaro.blog/" rel="alternate"></link><link href="https://jaro.blog/feeds/web-development.atom.xml" rel="self"></link><id>https://jaro.blog/</id><updated>2020-01-14T00:00:00+08:00</updated><entry><title>Serving compressed files from Google Cloud Storage</title><link href="https://jaro.blog/blog/serve-gzip-files-from-gcs.html" rel="alternate"></link><published>2020-01-14T00:00:00+08:00</published><updated>2020-01-14T00:00:00+08:00</updated><author><name>Jarosław Wierzbicki</name></author><id>tag:jaro.blog,2020-01-14:/blog/serve-gzip-files-from-gcs.html</id><summary type="html">&lt;p&gt;Recently I’ve been looking into some ways to optimise the loading speed
+<feed xmlns="http://www.w3.org/2005/Atom"><title>jaro.blog - Web development</title><link href="https://jaro.blog/" rel="alternate"></link><link href="https://jaro.blog/feeds/web-development.atom.xml" rel="self"></link><id>https://jaro.blog/</id><updated>2021-06-06T00:00:00+08:00</updated><entry><title>Serving compressed files from Google Cloud Storage</title><link href="https://jaro.blog/blog/serve-gzip-files-from-gcs.html" rel="alternate"></link><published>2020-01-14T00:00:00+08:00</published><updated>2021-06-06T00:00:00+08:00</updated><author><name>Jarosław Wierzbicki</name></author><id>tag:jaro.blog,2020-01-14:/blog/serve-gzip-files-from-gcs.html</id><summary type="html">&lt;p&gt;Recently I’ve been looking into some ways to optimise the loading speed
 of a website that I’m working on. One of the possible improvements suggested
 by Chromium’s &lt;a class="reference external" href="https://developers.google.com/web/tools/lighthouse"&gt;Audit&lt;/a&gt; tool
 was to &lt;a class="reference external" href="https://web.dev/uses-text-compression"&gt;enable text  compression&lt;/a&gt;.
@@ -92,8 +92,8 @@ response contains &lt;code&gt;content-encoding: gzip&lt;/code&gt; and
 &lt;p&gt;If it does, then all is working as intended and we're home. That’s it,
 so simple, isn’t it?&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class="section" id="conclusion"&gt;
-&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;div class="section" id="summary"&gt;
+&lt;h2&gt;Summary&lt;/h2&gt;
 &lt;p&gt;Gzip compression of static files can significantly speed up loading of your
 website especially if it’s a fairly complex one with a lot of CSS and JS files.
 Luckily, if you’re using Google Cloud Storage, there’s really very little work
@@ -130,4 +130,4 @@ it. 😉&lt;/p&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="Web development"></category><category term="Google Cloud Storage"></category><category term="gzip"></category><category term="tips&amp;tricks"></category></entry></feed>
+</content><category term="Web development"></category><category term="Google Cloud Storage"></category><category term="GCS"></category><category term="storage"></category><category term="gzip"></category><category term="compression"></category><category term="gsutil"></category><category term="cp"></category><category term="rsync"></category><category term="tips&amp;tricks"></category></entry></feed>
