@@ -8,6 +8,8 @@ Connecting to Android device from Windows Subsystem for Linux using ADB
 :slug: adb-in-wsl2
 :lang: en
 :tags: ADB, Android, Linux, Windows, WSL, WSL2
+:description: Don't know how to connect to your Android device from Windows \
+              Subsystem for Linux (WSL2) via ADB? Find out from this article.
 
 A few weeks ago COVID-19 finally hit Taiwan (so far we've been doing pretty
 well) and I had to move to work from home like the rest of the world (well at

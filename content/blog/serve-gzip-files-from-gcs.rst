@@ -5,9 +5,14 @@ Serving compressed files from Google Cloud Storage
 :author: Jarosław Wierzbicki
 :category: Web development
 :date: 2020-01-14
+:modified: 2021-06-06
 :slug: serve-gzip-files-from-gcs
 :lang: en
-:tags: Google Cloud Storage, gzip, tips&tricks
+:tags: Google Cloud Storage, GCS, storage, gzip, compression, gsutil, cp, rsync,
+       tips&tricks
+:description: Searching for how to server gzip-compressed static files from \
+              Google Cloud Console (GCS)? Check out this short but \
+              comprehensive guide on how to do it.
 
 Recently I’ve been looking into some ways to optimise the loading speed
 of a website that I’m working on. One of the possible improvements suggested
@@ -102,8 +107,8 @@ response contains :code:`content-encoding: gzip` and
 If it does, then all is working as intended and we're home. That’s it,
 so simple, isn’t it?
 
-Conclusion
-==========
+Summary
+=======
 
 Gzip compression of static files can significantly speed up loading of your
 website especially if it’s a fairly complex one with a lot of CSS and JS files.

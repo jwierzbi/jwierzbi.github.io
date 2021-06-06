@@ -1,5 +1,6 @@
 Title: About me
 Slug: about
+Description: A short something about the author of https://jaro.blog. Come on it, let me take your coat and let's get to know each other.
 
 <div class="columns">
 <div class="column is-one-quarter has-text-centered">
@@ -22,7 +23,7 @@ you for giving me a chance to introduce myself.</p>
 live... not on the mountain but in the city. 😉</p>
 
 <p>I am and have been a software engineer professionally for a little more
-than 8 years now. My language of choice is C, but I've also worked or am still
+than 10 years now. My language of choice is C, but I've also worked or am still
 working with C++, Java, Groovy, Python and JavaScript.</p>
 
 <p>My professional career so far has mostly been with embedded systems

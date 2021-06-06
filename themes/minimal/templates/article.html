@@ -3,16 +3,20 @@
 
 {% block title %}{{ SITENAME }} - {{ article.title }}{% endblock %}
 
+{% block description -%}
+  {% if article.description -%}
+    {{article.description}}
+  {%- else -%}
+    {{ super() }}
+  {%- endif %}
+{% endblock description %}
+
 {% block head %}
 {{ super() }}
 
   {% import 'translations.html' as translations with context %}
   {% if translations.entry_hreflang(article) %}
   {{ translations.entry_hreflang(article) }}
-  {% endif %}
-
-  {% if article.description %}
-  <meta name="description" content="{{article.description}}" />
   {% endif %}
 
   {% for tag in article.tags %}

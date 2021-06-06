@@ -3,6 +3,14 @@
 
 {% block title %}{{ SITENAME }} - {{ page.title }}{%endblock%}
 
+{% block description -%}
+  {% if page.description -%}
+    {{page.description}}
+  {%- else -%}
+    {{ super() }}
+  {%- endif %}
+{% endblock description %}
+
 {% block head %}
 {{ super() }}
 
