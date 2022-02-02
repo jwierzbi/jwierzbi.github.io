@@ -44,12 +44,8 @@
 
   <link rel="icon" href="{{ SITEURL }}/theme/img/favicon.ico"
         sizes="16x16 24x24 32x32 64x64 128x128" type="image/png">
-  <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link href="{{ SITEURL }}/theme/css/pygment.css" rel="stylesheet">
   <link href="{{ SITEURL }}/theme/css/minimal.css" rel="stylesheet">
 
   <script src="{{ SITEURL }}/theme/js/minimal.js"></script>
@@ -93,7 +89,7 @@
           <span class="navbar-link">
             Categories
           </span>
-          <div class="navbar-dropdown">
+          <div class="navbar-dropdown is-shadowless">
   {% for cat, null in categories %}
             <a class="navbar-item{% if cat == category %} is-active{% endif %}"
                href="{{ SITEURL }}/{{ cat.url }}">
@@ -124,20 +120,20 @@
 
   <footer class="footer is-dark">
     <div class="social has-text-centered">
-      <a href="https://www.facebook.com/jwierzbi">
-        <i class="fa fa-facebook-square fa-2x" style="color: #4267b2;" aria-hidden="true"></i>
+      <a href="https://www.facebook.com/jwierzbi" class="icon is-large">
+        <i class="fa fa-facebook-square fa-2x facebook-icon" aria-hidden="true"></i>
       </a>
-      <a href="https://www.instagram.com/wierzbicki.jaroslaw/">
-        <i class="fa fa-instagram fa-2x" style="color: #000;" aria-hidden="true"></i>
+      <a href="https://www.instagram.com/wierzbicki.jaroslaw/" class="icon is-large">
+        <i class="fa fa-instagram fa-2x instagram-icon" aria-hidden="true"></i>
       </a>
-      <a href="https://twitter.com/j_wierzbicki">
-        <i class="fa fa-twitter-square fa-2x" style="color: #1da1f2;" aria-hidden="true"></i>
+      <a href="https://twitter.com/j_wierzbicki" class="icon is-large">
+        <i class="fa fa-twitter-square fa-2x twitter-icon" style="color: #1da1f2;" aria-hidden="true"></i>
       </a>
-      <a href="https://github.com/jwierzbi">
-        <i class="fa fa-github-square fa-2x" style="color: #000;" aria-hidden="true"></i>
+      <a href="https://github.com/jwierzbi" class="icon is-large">
+        <i class="fa fa-github-square fa-2x github-icon" aria-hidden="true"></i>
       </a>
-      <a href="https://www.linkedin.com/in/jaroslaw-wierzbicki-14845043">
-        <i class="fa fa-linkedin-square fa-2x" style="color: #0077b5;" aria-hidden="true"></i>
+      <a href="https://www.linkedin.com/in/jaroslaw-wierzbicki-14845043" class="icon is-large">
+        <i class="fa fa-linkedin-square fa-2x linkedid-icon" aria-hidden="true"></i>
       </a>
     </div>
     <div class="content has-text-centered">

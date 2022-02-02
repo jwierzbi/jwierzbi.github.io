@@ -1,0 +1,13 @@
+{
+  "name": "minimal",
+  "version": "1.0.0",
+  "scripts": {
+    "css-build": "sass --load-path=node_modules --style compressed ./sass:../../static/css",
+    "css-watch": "npm run css-build -- --watch"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "bulma": "^0.9.4",
+    "sass": "^1.82.0"
+  }
+}

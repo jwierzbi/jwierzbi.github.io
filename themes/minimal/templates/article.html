@@ -64,12 +64,12 @@ Category:
             </p>
           </div>
   {% if article.tags %}
-          <div class="tags are-medium is-centered">
+          <div class="tags are-normal is-centered">
     {% for tag in article.tags %}
-            <span class="tag is-link is-light">
+            <span class="tag">
               <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
             </span>
-    {% endfor %}
+    {% endfor %} {# tag in article.tags #}
           </div>
   {% endif %} {# article.tags #}
         </div>

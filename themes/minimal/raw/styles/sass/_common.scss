@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+// override Bulma variables
+
+$family-sans-serif: Lato, sans-serif;
+$card-radius: 0 !default;
+$card-shadow: none !default;
+
+$weight-medium: 700;
+$weight-semibold: 700;
+
+// includes
+
+// font definitions
+@import "_common_fonts.scss";
+
+// Bulma
+@import "bulma/sass/utilities/initial-variables.sass";
+@import "bulma/sass/utilities/derived-variables.sass";
+@import "bulma/sass/utilities/controls.sass";
+@import "bulma/sass/utilities/extends.sass";
+@import "bulma/sass/utilities/functions.sass";
+@import "bulma/sass/utilities/mixins.sass";
+
+@import "bulma/sass/base/generic.sass";
+@import "bulma/sass/base/minireset.sass";
+
+@import "bulma/sass/components/card.sass";
+@import "bulma/sass/components/dropdown.sass";
+@import "bulma/sass/components/navbar.sass";
+
+@import "bulma/sass/elements/box.sass";
+@import "bulma/sass/elements/container.sass";
+@import "bulma/sass/elements/content.sass";
+@import "bulma/sass/elements/icon.sass";
+@import "bulma/sass/elements/image.sass";
+@import "bulma/sass/elements/tag.sass";
+@import "bulma/sass/elements/other.sass";
+
+@import "bulma/sass/grid/columns.sass";
+
+@import "bulma/sass/layout/_all.sass";
+
+@import "bulma/sass/helpers/_all.sass";
+
+// override and add new styles
+
+html {
+  font-size: 18px;
+}
+
+/* article list */
+
+@media only screen and (max-width: 768px) {
+  .section.article-list {
+    padding: 0;
+  }
+  .section.articles {
+    padding: 0;
+  }
+  .card {
+    box-shadow: none;
+  }
+}
+
+.article-list .content p {
+  line-height: 1.9;
+  margin: 15px 0;
+  text-align: justify;
+}
+
+.article-list-element:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.article-list-body {
+  line-height: 180%;
+  margin: 3rem 0rem;
+}
+
+.article-list-body p {
+  margin: 0.8rem 0;
+  text-align: justify;
+}
+
+/* article */
+
+.articles .content p {
+  line-height: 1.9;
+  margin: 15px 0;
+  text-align: justify;
+}
+.articles .paginator {
+  margin-top: 3rem;
+  text-align: center;
+}
+.article-header {
+  margin-top: 3rem;
+}
+.article-title {
+  font-size: 2rem;
+  font-weight: lighter;
+  line-height: 2;
+}
+.article-subtitle {
+  color: #909AA0;
+  margin-bottom: 3rem;
+}
+.article-body {
+  line-height: 1.4;
+  margin: 3rem 0rem;
+
+  .section {
+    padding: 1.5rem 0 0 0;
+
+    dd {
+      margin-bottom: 15px;
+    }
+    dd {
+      p.first {
+        margin-top: 0;
+      }
+      dd p.last {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.formula {
+  text-align: center;
+  font-family: monospace;
+  font-size: 1.2rem;
+}
+
+.highlight pre {
+  font-family: 'Iosevka Term Slab', monospace;
+  font-size: 1rem;
+  color: inherit;
+  background-color: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+
+.content {
+  table.footnote {
+    margin: 0;
+    table-layout: fixed;
+    width: 100%;
+  }
+  table.footnote col {
+    width: 30px;
+  }
+}
+
+.social {
+  margin: 10px;
+
+  a {
+    margin: 10px;
+  }
+}
+
+.footnotes {
+  list-style: disc outside;
+  margin-left: 2em !important;
+  margin-right: 1em !important;
+}

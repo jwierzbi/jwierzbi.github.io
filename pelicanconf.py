@@ -42,7 +42,7 @@ SOCIAL = (
 
 DEFAULT_PAGINATION = 10
 
-# Static files to be coppied to root
+# Static files to be copied to root
 
 STATIC_PATHS = [
     'extra/CNAME'

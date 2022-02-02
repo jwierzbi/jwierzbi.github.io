@@ -1,11 +1,15 @@
 # Python
 
 env/
-__pycache__
+__pycache__/
+
+# Node
+
+node_modules/
 
 # project
 
-.vscode
-output
-plugins
+.vscode/
+output/
+plugins/
 seo_report.html

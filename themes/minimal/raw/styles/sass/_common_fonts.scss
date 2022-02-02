@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/* iosevka-400 */
+@font-face {
+  font-family: 'Iosevka Term Slab';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/iosevka-term-slab-regular.woff');
+}
+
+/* lato-300 - latin-ext_latin */
+@font-face {
+  font-family: 'Lato';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/lato-v22-latin-ext_latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/lato-v22-latin-ext_latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* lato-300italic - latin-ext_latin */
+@font-face {
+  font-family: 'Lato';
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/lato-v22-latin-ext_latin-300italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/lato-v22-latin-ext_latin-300italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* lato-regular - latin-ext_latin */
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/lato-v22-latin-ext_latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/lato-v22-latin-ext_latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* lato-italic - latin-ext_latin */
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/lato-v22-latin-ext_latin-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/lato-v22-latin-ext_latin-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* lato-700 - latin-ext_latin */
+@font-face {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/lato-v22-latin-ext_latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/lato-v22-latin-ext_latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* lato-700italic - latin-ext_latin */
+@font-face {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: local(''),
+       url('../fonts/lato-v22-latin-ext_latin-700italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../fonts/lato-v22-latin-ext_latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
