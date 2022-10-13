@@ -1,6 +1,6 @@
 # Python
 
-.python-version
+env/
 __pycache__
 
 # project
@@ -9,4 +9,3 @@ __pycache__
 output
 plugins
 seo_report.html
-
