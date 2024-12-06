@@ -5,6 +5,7 @@ Conditional content removal using Docutils classes
 :author: Jarosław Wierzbicki
 :category: Documentation
 :date: 2021-06-07
+:modified: 2024-12-06
 :slug: content-removal-with-docutils-classes
 :lang: en
 :tags: Docutils, documentation, reStructuredText, reST
@@ -241,7 +242,7 @@ the case of a list:
 
     - Bullet list,
 
-    .. class:: list-item
+        .. class:: list-item
 
     - is a compound
     - body element
