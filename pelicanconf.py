@@ -52,5 +52,5 @@ STATIC_PATHS = [
 PLUGIN_PATHS = ['plugins']
 PLUGINS = ['summary', 'rstfootnotes']
 
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# Enable document-relative URLs when developing
+RELATIVE_URLS = True
