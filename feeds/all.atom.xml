@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>jaro.blog</title><link href="https://jaro.blog/" rel="alternate"></link><link href="https://jaro.blog/feeds/all.atom.xml" rel="self"></link><id>https://jaro.blog/</id><updated>2021-06-07T00:00:00+08:00</updated><entry><title>Conditional content removal using Docutils classes</title><link href="https://jaro.blog/blog/content-removal-with-docutils-classes.html" rel="alternate"></link><published>2021-06-07T00:00:00+08:00</published><updated>2021-06-07T00:00:00+08:00</updated><author><name>Jarosław Wierzbicki</name></author><id>tag:jaro.blog,2021-06-07:/blog/content-removal-with-docutils-classes.html</id><summary type="html">&lt;p&gt;Some time ago I had a problem where I had to exclude parts of one of my
+<feed xmlns="http://www.w3.org/2005/Atom"><title>jaro.blog</title><link href="https://jaro.blog/" rel="alternate"></link><link href="https://jaro.blog/feeds/all.atom.xml" rel="self"></link><id>https://jaro.blog/</id><updated>2024-12-06T00:00:00+08:00</updated><entry><title>Conditional content removal using Docutils classes</title><link href="https://jaro.blog/blog/content-removal-with-docutils-classes.html" rel="alternate"></link><published>2021-06-07T00:00:00+08:00</published><updated>2024-12-06T00:00:00+08:00</updated><author><name>Jarosław Wierzbicki</name></author><id>tag:jaro.blog,2021-06-07:/blog/content-removal-with-docutils-classes.html</id><summary type="html">&lt;p&gt;Some time ago I had a problem where I had to exclude parts of one of my
 documents based on a build-time condition. I wanted to maintain one document but
 produce two versions: one that contained internal details of a product and one
 that didn't.&lt;/p&gt;
@@ -55,23 +55,23 @@ of a document, &lt;code&gt;paragraph&lt;/code&gt; and &lt;code&gt;emphasised&lt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The above document will be converted to a document tree that will look something
 like the below:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;lt;document&amp;gt;&lt;/span&gt;
-     &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
-         Title
-     &lt;span class="nt"&gt;&amp;lt;subtitle&amp;gt;&lt;/span&gt;
-         Subtitle
-&lt;span class="hll"&gt;     &lt;span class="nt"&gt;&amp;lt;section&lt;/span&gt; &lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;subsection&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;         &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
-             Section is a structural element
-&lt;span class="hll"&gt;         &lt;span class="nt"&gt;&amp;lt;paragraph&lt;/span&gt; &lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;paragraph emphasised&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;             A paragraph is a simple body element.
-&lt;span class="hll"&gt;         &lt;span class="nt"&gt;&amp;lt;bullet_list&lt;/span&gt; &lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;             &lt;span class="nt"&gt;&amp;lt;list_item&amp;gt;&lt;/span&gt;
-                 &lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
-                     Bullet list,
-             &lt;span class="nt"&gt;&amp;lt;list_item&amp;gt;&lt;/span&gt;
-                 &lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
-                     is a compound body element.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;document&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;Title
+&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;subtitle&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;Subtitle
+&lt;span class="hll"&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;section&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;subsection&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;             &lt;/span&gt;Section&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;structural&lt;span class="w"&gt; &lt;/span&gt;element
+&lt;span class="hll"&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;paragraph&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;paragraph emphasised&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class="w"&gt;             &lt;/span&gt;A&lt;span class="w"&gt; &lt;/span&gt;paragraph&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;simple&lt;span class="w"&gt; &lt;/span&gt;body&lt;span class="w"&gt; &lt;/span&gt;element.
+&lt;span class="hll"&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;bullet_list&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class="w"&gt;             &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;list_item&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;                 &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;                     &lt;/span&gt;Bullet&lt;span class="w"&gt; &lt;/span&gt;list,
+&lt;span class="w"&gt;             &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;list_item&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;                 &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;                     &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;compound&lt;span class="w"&gt; &lt;/span&gt;body&lt;span class="w"&gt; &lt;/span&gt;element.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p class="message-body message"&gt;The above output is a so-called &lt;a class="reference external" href="https://docutils.sourceforge.io/docs/ref/doctree.html#pseudo-xml"&gt;pseudo-XML&lt;/a&gt;. It’s a format used
 in Docutils for presenting a document tree in a easy-to-understand
@@ -109,23 +109,23 @@ follow the previous example then yes but there's a better way:&lt;/p&gt;
      &lt;span class="m"&gt;-&lt;/span&gt; is a compound body element.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The above example will give a document tree with the below structure:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;lt;document&amp;gt;&lt;/span&gt;
-     &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
-         Title
-     &lt;span class="nt"&gt;&amp;lt;subtitle&amp;gt;&lt;/span&gt;
-         Subtitle
-     &lt;span class="nt"&gt;&amp;lt;section&amp;gt;&lt;/span&gt;
-         &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
-             Section is a structural element
-&lt;span class="hll"&gt;         &lt;span class="nt"&gt;&amp;lt;paragraph&lt;/span&gt; &lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;a-block&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;             A paragraph is a simple body element.
-&lt;span class="hll"&gt;         &lt;span class="nt"&gt;&amp;lt;bullet_list&lt;/span&gt; &lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;a-block&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;             &lt;span class="nt"&gt;&amp;lt;list_item&amp;gt;&lt;/span&gt;
-                 &lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
-                     Bullet list
-             &lt;span class="nt"&gt;&amp;lt;list_item&amp;gt;&lt;/span&gt;
-                 &lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
-                     is a compound body element.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;document&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;Title
+&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;subtitle&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;Subtitle
+&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;section&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;             &lt;/span&gt;Section&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;structural&lt;span class="w"&gt; &lt;/span&gt;element
+&lt;span class="hll"&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;paragraph&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;a-block&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class="w"&gt;             &lt;/span&gt;A&lt;span class="w"&gt; &lt;/span&gt;paragraph&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;simple&lt;span class="w"&gt; &lt;/span&gt;body&lt;span class="w"&gt; &lt;/span&gt;element.
+&lt;span class="hll"&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;bullet_list&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;a-block&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class="w"&gt;             &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;list_item&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;                 &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;                     &lt;/span&gt;Bullet&lt;span class="w"&gt; &lt;/span&gt;list
+&lt;span class="w"&gt;             &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;list_item&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;                 &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;                     &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;compound&lt;span class="w"&gt; &lt;/span&gt;body&lt;span class="w"&gt; &lt;/span&gt;element.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Notice how the indented block was placed directly in the subsection and the
 class &lt;code&gt;a-block&lt;/code&gt; was applied to each of the indented elements. This works
@@ -158,22 +158,22 @@ elements it won't work, i.e. sections can't be in the class' indented block.&lt;
                  Paragraph at level 3.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Which would results in:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;lt;document&amp;gt;&lt;/span&gt;
-     &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
-         Title
-     &lt;span class="nt"&gt;&amp;lt;subtitle&amp;gt;&lt;/span&gt;
-         Subtitle
-     &lt;span class="nt"&gt;&amp;lt;section&amp;gt;&lt;/span&gt;
-         &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
-             Section is a structural element
-&lt;span class="hll"&gt;         &lt;span class="nt"&gt;&amp;lt;paragraph&lt;/span&gt; &lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;level-0&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;             Paragraph at level 0.
-&lt;span class="hll"&gt;         &lt;span class="nt"&gt;&amp;lt;paragraph&lt;/span&gt; &lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;level-1 level-0&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;             Paragraph at level 1.
-&lt;span class="hll"&gt;         &lt;span class="nt"&gt;&amp;lt;paragraph&lt;/span&gt; &lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;level-2 level-1 level-0&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;             Paragraphs at level 2.
-&lt;span class="hll"&gt;         &lt;span class="nt"&gt;&amp;lt;paragraph&lt;/span&gt; &lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;level-3 level-2 level-1 level-0&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;             Paragraph at level 3.
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;document&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;Title
+&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;subtitle&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;Subtitle
+&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;section&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;             &lt;/span&gt;Section&lt;span class="w"&gt; &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;structural&lt;span class="w"&gt; &lt;/span&gt;element
+&lt;span class="hll"&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;paragraph&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;level-0&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class="w"&gt;             &lt;/span&gt;Paragraph&lt;span class="w"&gt; &lt;/span&gt;at&lt;span class="w"&gt; &lt;/span&gt;level&lt;span class="w"&gt; &lt;/span&gt;0.
+&lt;span class="hll"&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;paragraph&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;level-1 level-0&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class="w"&gt;             &lt;/span&gt;Paragraph&lt;span class="w"&gt; &lt;/span&gt;at&lt;span class="w"&gt; &lt;/span&gt;level&lt;span class="w"&gt; &lt;/span&gt;1.
+&lt;span class="hll"&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;paragraph&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;level-2 level-1 level-0&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class="w"&gt;             &lt;/span&gt;Paragraphs&lt;span class="w"&gt; &lt;/span&gt;at&lt;span class="w"&gt; &lt;/span&gt;level&lt;span class="w"&gt; &lt;/span&gt;2.
+&lt;span class="hll"&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;paragraph&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;level-3 level-2 level-1 level-0&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class="w"&gt;             &lt;/span&gt;Paragraph&lt;span class="w"&gt; &lt;/span&gt;at&lt;span class="w"&gt; &lt;/span&gt;level&lt;span class="w"&gt; &lt;/span&gt;3.
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;That's pretty cool, right? 😁&lt;/p&gt;
 &lt;p&gt;In all the above examples, we applied the class directive to the whole compound
@@ -183,22 +183,22 @@ the case of a list:&lt;/p&gt;
 
  &lt;span class="m"&gt;-&lt;/span&gt; Bullet list,
 
-&lt;span class="hll"&gt;&lt;span class="p"&gt; ..&lt;/span&gt; &lt;span class="ow"&gt;class&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; list-item
+&lt;span class="hll"&gt;&lt;span class="p"&gt;     ..&lt;/span&gt; &lt;span class="ow"&gt;class&lt;/span&gt;&lt;span class="p"&gt;::&lt;/span&gt; list-item
 &lt;/span&gt;
  &lt;span class="m"&gt;-&lt;/span&gt; is a compound
  &lt;span class="m"&gt;-&lt;/span&gt; body element
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The class in such case is applied to the second item only:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; &lt;span class="nt"&gt;&amp;lt;bullet_list&lt;/span&gt; &lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-     &lt;span class="nt"&gt;&amp;lt;list_item&amp;gt;&lt;/span&gt;
-         &lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
-             Bullet list,
-&lt;span class="hll"&gt;     &lt;span class="nt"&gt;&amp;lt;list_item&lt;/span&gt; &lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;list-item&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;         &lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
-             is a compound
-     &lt;span class="nt"&gt;&amp;lt;list_item&amp;gt;&lt;/span&gt;
-         &lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
-             body element
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;bullet_list&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;list&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;list_item&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;             &lt;/span&gt;Bullet&lt;span class="w"&gt; &lt;/span&gt;list,
+&lt;span class="hll"&gt;&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;list_item&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="na"&gt;classes=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;list-item&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;             &lt;/span&gt;is&lt;span class="w"&gt; &lt;/span&gt;a&lt;span class="w"&gt; &lt;/span&gt;compound
+&lt;span class="w"&gt;     &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;list_item&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;         &lt;/span&gt;&lt;span class="nt"&gt;&amp;lt;paragraph&amp;gt;&lt;/span&gt;
+&lt;span class="w"&gt;             &lt;/span&gt;body&lt;span class="w"&gt; &lt;/span&gt;element
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Just remember that the class directive, in this case, must be properly aligned
 with the preceding list item, otherwise it won't work as expected.&lt;/p&gt;
@@ -213,7 +213,7 @@ try and tackle the main problem. This part will be much shorter.&lt;/p&gt;
 usually used for: they allow to exclude nodes from the document. This can be
 done by passing a class name to the &lt;code&gt;--strip-elements-with-class&lt;/code&gt; option
 of the &lt;code&gt;rst2xxx.py&lt;/code&gt; family of commands, e.g.:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;rst2html5.py --strip-elements-with-class&lt;span class="o"&gt;=&lt;/span&gt;internal doc.rst
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="gp"&gt;$ &lt;/span&gt;rst2html5.py&lt;span class="w"&gt; &lt;/span&gt;--strip-elements-with-class&lt;span class="o"&gt;=&lt;/span&gt;internal&lt;span class="w"&gt; &lt;/span&gt;doc.rst
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;The above command will generate an HTML document with all of the nodes with
 an &lt;code&gt;internal&lt;/code&gt; class removed. That's right, it's that easy 😉.&lt;/p&gt;
@@ -239,7 +239,7 @@ External content.
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;xmlns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://www.w3.org/1999/xhtml&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;xml:lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;en&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;en&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
-&lt;span class="c"&gt;&amp;lt;!-- ... --&amp;gt;&lt;/span&gt;
+&lt;span class="cm"&gt;&amp;lt;!-- ... --&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
 &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
     &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;div&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;document&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
@@ -262,13 +262,13 @@ that part if you're not interested.&lt;/p&gt;
 a &lt;em&gt;directive&lt;/em&gt; and there is a &lt;em&gt;transform&lt;/em&gt;.&lt;/p&gt;
 &lt;div class="section" id="directive"&gt;
 &lt;h3&gt;Directive&lt;/h3&gt;
-&lt;p&gt;Directives &lt;a class="footnote-reference" href="#id10" id="id1"&gt;[1]&lt;/a&gt; &lt;a class="footnote-reference" href="#id11" id="id2"&gt;[2]&lt;/a&gt; are an extension mechanism for the reStructuredText markup
+&lt;p&gt;Directives &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt; &lt;a class="footnote-reference" href="#footnote-2" id="footnote-reference-2"&gt;[2]&lt;/a&gt; are an extension mechanism for the reStructuredText markup
 language. Each directive starts with a double full stop and whitespace and
 ends with a double colon and whitespace with the directive type in between
 e.g. &lt;code&gt;.. class:: class-name&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;Directives are a very flexible way of extending Docutils &lt;a class="footnote-reference" href="#id12" id="id3"&gt;[3]&lt;/a&gt; so let's take
-a look at the code of the class directive &lt;a class="footnote-reference" href="#id13" id="id4"&gt;[4]&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Each directive extends the &lt;code&gt;docutils.parsers.rst.Directive&lt;/code&gt; &lt;a class="footnote-reference" href="#id14" id="id5"&gt;[5]&lt;/a&gt; base
+&lt;p&gt;Directives are a very flexible way of extending Docutils &lt;a class="footnote-reference" href="#footnote-3" id="footnote-reference-3"&gt;[3]&lt;/a&gt; so let's take
+a look at the code of the class directive &lt;a class="footnote-reference" href="#footnote-4" id="footnote-reference-4"&gt;[4]&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Each directive extends the &lt;code&gt;docutils.parsers.rst.Directive&lt;/code&gt; &lt;a class="footnote-reference" href="#footnote-5" id="footnote-reference-5"&gt;[5]&lt;/a&gt; base
 class and implements &lt;code&gt;run&lt;/code&gt; method:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;docutils.parsers.rst&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Directive&lt;/span&gt;
 
@@ -315,7 +315,7 @@ like below:&lt;/p&gt;
 &lt;p&gt;First, we create an empty element that will serve as a container for the content
 included in the nested block: &lt;code&gt;container = nodes.Element()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Next, we parse the directive's content with the call to &lt;code&gt;nested_parse()&lt;/code&gt;
-&lt;a class="footnote-reference" href="#id15" id="id6"&gt;[6]&lt;/a&gt;. This will add children elements created from &lt;code&gt;self.content&lt;/code&gt; and put
+&lt;a class="footnote-reference" href="#footnote-6" id="footnote-reference-6"&gt;[6]&lt;/a&gt;. This will add children elements created from &lt;code&gt;self.content&lt;/code&gt; and put
 them into the &lt;code&gt;container&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;We then iterate over all of the created children in the container and add the
 class name to the node's &lt;code&gt;classes&lt;/code&gt; attribute.&lt;/p&gt;
@@ -347,13 +347,13 @@ Next (&lt;a class="reference internal" href="#transform"&gt;Transform&lt;/a&gt;)
 &lt;/div&gt;
 &lt;div class="section" id="transform"&gt;
 &lt;h3&gt;Transform&lt;/h3&gt;
-&lt;p&gt;Transforms &lt;a class="footnote-reference" href="#id16" id="id7"&gt;[7]&lt;/a&gt; are run after the whole document has been parsed and their
+&lt;p&gt;Transforms &lt;a class="footnote-reference" href="#footnote-7" id="footnote-reference-7"&gt;[7]&lt;/a&gt; are run after the whole document has been parsed and their
 purpose is to change the document tree in place. They can perform different
 operations like resolving references or removing elements based on a
 certain condition.&lt;/p&gt;
-&lt;p&gt;We'll take a look at the &lt;code&gt;ClassAttribute&lt;/code&gt; &lt;a class="footnote-reference" href="#id17" id="id8"&gt;[8]&lt;/a&gt; transform that is used by the
+&lt;p&gt;We'll take a look at the &lt;code&gt;ClassAttribute&lt;/code&gt; &lt;a class="footnote-reference" href="#footnote-8" id="footnote-reference-8"&gt;[8]&lt;/a&gt; transform that is used by the
 &lt;code&gt;Class&lt;/code&gt; directive class.&lt;/p&gt;
-&lt;p&gt;Each transform object derives from the &lt;code&gt;docutils.tranforms.Transform&lt;/code&gt; &lt;a class="footnote-reference" href="#id18" id="id9"&gt;[9]&lt;/a&gt;
+&lt;p&gt;Each transform object derives from the &lt;code&gt;docutils.tranforms.Transform&lt;/code&gt; &lt;a class="footnote-reference" href="#footnote-9" id="footnote-reference-9"&gt;[9]&lt;/a&gt;
 class and implements the &lt;code&gt;apply&lt;/code&gt; method.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ClassAttribute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Transform&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
     &lt;span class="n"&gt;default_priority&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;210&lt;/span&gt;
@@ -440,72 +440,72 @@ and easy way to achieve the desired outcome when writing our documentation.&lt;/
 &lt;hr class="docutils" /&gt;
 &lt;ul class="footnotes"&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id10"&gt;
-            &lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-1"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-1"&gt;[1]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html#directives"&gt;reStructuredText Markup Specification, Directives&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id11"&gt;
-            &lt;a class="fn-backref" href="#id2"&gt;[2]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-2"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-2"&gt;[2]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html"&gt;reStructuredText Directives&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id12"&gt;
-            &lt;a class="fn-backref" href="#id3"&gt;[3]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-3"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-3"&gt;[3]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://docutils.sourceforge.io/docs/howto/rst-directives.html"&gt;Creating reStructuredText Directives&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id13"&gt;
-            &lt;a class="fn-backref" href="#id4"&gt;[4]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-4"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-4"&gt;[4]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://github.com/docutils-mirror/docutils/blob/e88c5fb08d5cdfa8b4ac1020dd6f7177778d5990/docutils/parsers/rst/directives/misc.py#L327"&gt;https://github.com/docutils-mirror/docutils, docutils/parsers/rst/directives/misc.py:327&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id14"&gt;
-            &lt;a class="fn-backref" href="#id5"&gt;[5]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-5"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-5"&gt;[5]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://github.com/docutils-mirror/docutils/blob/e88c5fb08d5cdfa8b4ac1020dd6f7177778d5990/docutils/parsers/rst/__init__.py#L194"&gt;https://github.com/docutils-mirror/docutils, docutils/parsers/rst/__init__.py:194&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id15"&gt;
-            &lt;a class="fn-backref" href="#id6"&gt;[6]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-6"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-6"&gt;[6]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://github.com/docutils-mirror/docutils/blob/e88c5fb08d5cdfa8b4ac1020dd6f7177778d5990/docutils/parsers/rst/states.py#L257"&gt;https://github.com/docutils-mirror/docutils, docutils/parsers/rst/states.py:257&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id16"&gt;
-            &lt;a class="fn-backref" href="#id7"&gt;[7]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-7"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-7"&gt;[7]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://docutils.sourceforge.io/docs/ref/transforms.html"&gt;Docutils Transforms&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id17"&gt;
-            &lt;a class="fn-backref" href="#id8"&gt;[8]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-8"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-8"&gt;[8]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://github.com/docutils-mirror/docutils/blob/e88c5fb08d5cdfa8b4ac1020dd6f7177778d5990/docutils/transforms/misc.py#L35"&gt;https://github.com/docutils-mirror/docutils, docutils/transforms/misc.py:35&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id18"&gt;
-            &lt;a class="fn-backref" href="#id9"&gt;[9]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-9"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-9"&gt;[9]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://github.com/docutils-mirror/docutils/blob/e88c5fb08d5cdfa8b4ac1020dd6f7177778d5990/docutils/transforms/__init__.py#L33"&gt;https://github.com/docutils-mirror/docutils, docutils/transforms/__init__.py:33&lt;/a&gt;
@@ -519,7 +519,7 @@ least some of it). This forced me to use my work laptop for more than meetings.&
 &lt;p&gt;Normally I use a Linux PC for daily work so to get at least some of the comfort
 back I've set up Windows Subsystem for Linux version 2 (WSL2) on the laptop.&lt;/p&gt;
 &lt;p&gt;This didn't go without a few bumps along the way. The biggest one was the fact
-that WSL2 doesn't support accessing USB devices (version 1 allegedly does &lt;a class="footnote-reference" href="#id6" id="id1"&gt;[1]&lt;/a&gt;
+that WSL2 doesn't support accessing USB devices (version 1 allegedly does &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt;
 but I didn't have a chance to check) from Linux. And this was a problem for me
 since I need to connect to an Android device frequently.&lt;/p&gt;
 &lt;p&gt;But as long as there's Internet there's hope. After digging for some time
@@ -531,7 +531,7 @@ least some of it). This forced me to use my work laptop for more than meetings.&
 &lt;p&gt;Normally I use a Linux PC for daily work so to get at least some of the comfort
 back I've set up Windows Subsystem for Linux version 2 (WSL2) on the laptop.&lt;/p&gt;
 &lt;p&gt;This didn't go without a few bumps along the way. The biggest one was the fact
-that WSL2 doesn't support accessing USB devices (version 1 allegedly does &lt;a class="footnote-reference" href="#id6" id="id1"&gt;[1]&lt;/a&gt;
+that WSL2 doesn't support accessing USB devices (version 1 allegedly does &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt;
 but I didn't have a chance to check) from Linux. And this was a problem for me
 since I need to connect to an Android device frequently.&lt;/p&gt;
 &lt;p&gt;But as long as there's Internet there's hope. After digging for some time
@@ -541,7 +541,7 @@ problem.&lt;/p&gt;
 &lt;div class="section" id="how-does-android-debug-bridge-adb-work"&gt;
 &lt;h2&gt;How does Android Debug Bridge (ADB) work?&lt;/h2&gt;
 &lt;p&gt;Let's just quickly look at how the Android Debug Bridge (ADB) works.&lt;/p&gt;
-&lt;p&gt;ADB is a command line tool that implements client-server architecture &lt;a class="footnote-reference" href="#id7" id="id2"&gt;[2]&lt;/a&gt;. It
+&lt;p&gt;ADB is a command line tool that implements client-server architecture &lt;a class="footnote-reference" href="#footnote-2" id="footnote-reference-2"&gt;[2]&lt;/a&gt;. It
 consists of three parts:&lt;/p&gt;
 &lt;ul class="simple"&gt;
 &lt;li&gt;A client, which runs on a development machine and sends commands to the device
@@ -586,7 +586,7 @@ runs in WSL. We can do that by running (in WSL):&lt;/p&gt;
 &lt;p&gt;In my case, it's 1.0.41. This is important because we need to match this version
 on the Windows side. The easiest way is just to download the appropriate version
 for example from &lt;a class="reference external" href="https://androidmtk.com/download-android-sdk-platform-tools"&gt;this website&lt;/a&gt;. But there are also other
-methods &lt;a class="footnote-reference" href="#id8" id="id3"&gt;[3]&lt;/a&gt; &lt;a class="footnote-reference" href="#id9" id="id4"&gt;[4]&lt;/a&gt; if you don't feel comfortable downloading stuff from random
+methods &lt;a class="footnote-reference" href="#footnote-3" id="footnote-reference-3"&gt;[3]&lt;/a&gt; &lt;a class="footnote-reference" href="#footnote-4" id="footnote-reference-4"&gt;[4]&lt;/a&gt; if you don't feel comfortable downloading stuff from random
 websites on the Internet 😉.&lt;/p&gt;
 &lt;p&gt;When we get the appropriate version of the tool set up in our Windows we can
 check if the version indeed matches the Linux counterpart:&lt;/p&gt;
@@ -642,7 +642,7 @@ using the IP address of the virtual network interface is easier. Allowing
 communication between Windows and Linux is this interface's purpose after all.&lt;/p&gt;
 &lt;p&gt;Getting the IP address of the server from Windows after every reboot is a little
 inconvenient. Luckily this address is also available for Linux in
-&lt;em&gt;/etc/resolv.conf&lt;/em&gt; file &lt;a class="footnote-reference" href="#id10" id="id5"&gt;[5]&lt;/a&gt;:&lt;/p&gt;
+&lt;em&gt;/etc/resolv.conf&lt;/em&gt; file &lt;a class="footnote-reference" href="#footnote-5" id="footnote-reference-5"&gt;[5]&lt;/a&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ cat cat /etc/resolv.conf
 # This file was automatically generated by WSL...
 # [network]
@@ -684,40 +684,40 @@ takes is to execute two commands.&lt;/p&gt;
 &lt;h2&gt;Further reading&lt;/h2&gt;
 &lt;ul class="footnotes"&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id6"&gt;
-            &lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-1"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-1"&gt;[1]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/compare-versions#exceptions-for-using-wsl-1-rather-than-wsl-2"&gt;Exceptions for using WSL 1 rather than WSL 2&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id7"&gt;
-            &lt;a class="fn-backref" href="#id2"&gt;[2]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-2"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-2"&gt;[2]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://developer.android.com/studio/command-line/adb"&gt;Android Debug Bridge (adb)&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id8"&gt;
-            &lt;a class="fn-backref" href="#id3"&gt;[3]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-3"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-3"&gt;[3]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://developer.android.com/studio/releases/platform-tools"&gt;SDK Platform Tools release notes&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id9"&gt;
-            &lt;a class="fn-backref" href="#id4"&gt;[4]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-4"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-4"&gt;[4]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://stackoverflow.com/questions/53453640/is-there-a-way-to-install-an-older-version-of-android-platform-tools"&gt;Is there a way to install an older version of Android platform-tools?&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id10"&gt;
-            &lt;a class="fn-backref" href="#id5"&gt;[5]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-5"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-5"&gt;[5]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/compare-versions#accessing-windows-networking-apps-from-linux-host-ip"&gt;Accessing Windows networking apps from Linux (host IP)&lt;/a&gt;
@@ -736,7 +736,7 @@ plain text files like CSS and JavaScript to the browser, those files should be
 sent compressed so that the browser, upon receiving them, can decompress them
 to a plain text format. There is, of course, a CPU time cost to this approach
 but in most cases the savings from the data transfer outweigh it by a large
-margin &lt;a class="footnote-reference" href="#id5" id="id1"&gt;[1]&lt;/a&gt;. This is particularly true for mobile devices where the bandwidth
+margin &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt;. This is particularly true for mobile devices where the bandwidth
 is often limited.&lt;/p&gt;
 &lt;p&gt;Many servers nowadays support compression (be that dynamic or static) and there
 are plenty of resources describing how to enable it but for some reason I
@@ -753,7 +753,7 @@ plain text files like CSS and JavaScript to the browser, those files should be
 sent compressed so that the browser, upon receiving them, can decompress them
 to a plain text format. There is, of course, a CPU time cost to this approach
 but in most cases the savings from the data transfer outweigh it by a large
-margin &lt;a class="footnote-reference" href="#id5" id="id1"&gt;[1]&lt;/a&gt;. This is particularly true for mobile devices where the bandwidth
+margin &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt;. This is particularly true for mobile devices where the bandwidth
 is often limited.&lt;/p&gt;
 &lt;p&gt;Many servers nowadays support compression (be that dynamic or static) and there
 are plenty of resources describing how to enable it but for some reason I
@@ -775,13 +775,13 @@ to compress files upon uploading using their
 &lt;a class="reference external" href="https://cloud.google.com/storage/docs/gsutil"&gt;gsutil&lt;/a&gt; tool.&lt;/p&gt;
 &lt;p&gt;There are two ways to upload multiple files at a time to Google Cloud Storage
 using the &lt;code&gt;gsutil&lt;/code&gt; command. The first is to use &lt;code&gt;rsync&lt;/code&gt; and the
-other one is to use the &lt;code&gt;cp&lt;/code&gt; sub-command &lt;a class="footnote-reference" href="#id6" id="id3"&gt;[2]&lt;/a&gt;. Usually &lt;code&gt;rsync&lt;/code&gt;
+other one is to use the &lt;code&gt;cp&lt;/code&gt; sub-command &lt;a class="footnote-reference" href="#footnote-2" id="footnote-reference-2"&gt;[2]&lt;/a&gt;. Usually &lt;code&gt;rsync&lt;/code&gt;
 is more convenient but in this case we need to use &lt;cite&gt;cp&lt;/cite&gt; because the former
 doesn’t support compressing files during the upload (well that’s not exactly
 true, read further what the &lt;code&gt;-j&lt;/code&gt; option does and why it's not applicable
 here).&lt;/p&gt;
 &lt;p&gt;Let's get to business. Using the &lt;code&gt;cp&lt;/code&gt; sub-command is really easy, e.g.:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ gsutil -m cp -z css,js,map &lt;span class="o"&gt;[&lt;/span&gt;LOCAL_DIR&lt;span class="o"&gt;]&lt;/span&gt; gs://&lt;span class="o"&gt;[&lt;/span&gt;BUCKET&lt;span class="o"&gt;]&lt;/span&gt;/&lt;span class="o"&gt;[&lt;/span&gt;REMOTE_DIR&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;gsutil&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;cp&lt;span class="w"&gt; &lt;/span&gt;-z&lt;span class="w"&gt; &lt;/span&gt;css,js,map&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;LOCAL_DIR&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;gs://&lt;span class="o"&gt;[&lt;/span&gt;BUCKET&lt;span class="o"&gt;]&lt;/span&gt;/&lt;span class="o"&gt;[&lt;/span&gt;REMOTE_DIR&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Let’s break it down:&lt;/p&gt;
 &lt;dl class="docutils"&gt;
@@ -796,7 +796,7 @@ the &lt;code&gt;-j&lt;/code&gt; option which only compresses files for the durat
 of the upload process and decompresses them at the destination).&lt;/p&gt;
 &lt;p class="last"&gt;Beyond compressing of the files, the command will also apply the required
 attributes to the stored files needed to properly serve them compressed
-&lt;a class="footnote-reference" href="#id7" id="id4"&gt;[3]&lt;/a&gt;. In our example, all CSS, JS and MAP files will be stored compressed
+&lt;a class="footnote-reference" href="#footnote-3" id="footnote-reference-3"&gt;[3]&lt;/a&gt;. In our example, all CSS, JS and MAP files will be stored compressed
 (using gzip).&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt&gt;&lt;code&gt;LOCAL_DIR&lt;/code&gt;&lt;/dt&gt;
@@ -831,24 +831,24 @@ it. 😉&lt;/p&gt;
 &lt;h2&gt;Further Reading&lt;/h2&gt;
 &lt;ul class="footnotes"&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id5"&gt;
-            &lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-1"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-1"&gt;[1]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://royal.pingdom.com/can-gzip-compression-really-improve-web-performance/"&gt;Can gzip Compression Really Improve Web Performance?&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id6"&gt;
-            &lt;a class="fn-backref" href="#id3"&gt;[2]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-2"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-2"&gt;[2]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://cloud.google.com/storage/docs/transcoding"&gt;Transcoding of gzip-compressed files&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id7"&gt;
-            &lt;a class="fn-backref" href="#id4"&gt;[3]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-3"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-3"&gt;[3]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://cloud.google.com/storage/docs/gsutil/commands/cp"&gt;gsutil cp command documentation&lt;/a&gt;

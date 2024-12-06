@@ -10,7 +10,7 @@ plain text files like CSS and JavaScript to the browser, those files should be
 sent compressed so that the browser, upon receiving them, can decompress them
 to a plain text format. There is, of course, a CPU time cost to this approach
 but in most cases the savings from the data transfer outweigh it by a large
-margin &lt;a class="footnote-reference" href="#id5" id="id1"&gt;[1]&lt;/a&gt;. This is particularly true for mobile devices where the bandwidth
+margin &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt;. This is particularly true for mobile devices where the bandwidth
 is often limited.&lt;/p&gt;
 &lt;p&gt;Many servers nowadays support compression (be that dynamic or static) and there
 are plenty of resources describing how to enable it but for some reason I
@@ -27,7 +27,7 @@ plain text files like CSS and JavaScript to the browser, those files should be
 sent compressed so that the browser, upon receiving them, can decompress them
 to a plain text format. There is, of course, a CPU time cost to this approach
 but in most cases the savings from the data transfer outweigh it by a large
-margin &lt;a class="footnote-reference" href="#id5" id="id1"&gt;[1]&lt;/a&gt;. This is particularly true for mobile devices where the bandwidth
+margin &lt;a class="footnote-reference" href="#footnote-1" id="footnote-reference-1"&gt;[1]&lt;/a&gt;. This is particularly true for mobile devices where the bandwidth
 is often limited.&lt;/p&gt;
 &lt;p&gt;Many servers nowadays support compression (be that dynamic or static) and there
 are plenty of resources describing how to enable it but for some reason I
@@ -49,13 +49,13 @@ to compress files upon uploading using their
 &lt;a class="reference external" href="https://cloud.google.com/storage/docs/gsutil"&gt;gsutil&lt;/a&gt; tool.&lt;/p&gt;
 &lt;p&gt;There are two ways to upload multiple files at a time to Google Cloud Storage
 using the &lt;code&gt;gsutil&lt;/code&gt; command. The first is to use &lt;code&gt;rsync&lt;/code&gt; and the
-other one is to use the &lt;code&gt;cp&lt;/code&gt; sub-command &lt;a class="footnote-reference" href="#id6" id="id3"&gt;[2]&lt;/a&gt;. Usually &lt;code&gt;rsync&lt;/code&gt;
+other one is to use the &lt;code&gt;cp&lt;/code&gt; sub-command &lt;a class="footnote-reference" href="#footnote-2" id="footnote-reference-2"&gt;[2]&lt;/a&gt;. Usually &lt;code&gt;rsync&lt;/code&gt;
 is more convenient but in this case we need to use &lt;cite&gt;cp&lt;/cite&gt; because the former
 doesn’t support compressing files during the upload (well that’s not exactly
 true, read further what the &lt;code&gt;-j&lt;/code&gt; option does and why it's not applicable
 here).&lt;/p&gt;
 &lt;p&gt;Let's get to business. Using the &lt;code&gt;cp&lt;/code&gt; sub-command is really easy, e.g.:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ gsutil -m cp -z css,js,map &lt;span class="o"&gt;[&lt;/span&gt;LOCAL_DIR&lt;span class="o"&gt;]&lt;/span&gt; gs://&lt;span class="o"&gt;[&lt;/span&gt;BUCKET&lt;span class="o"&gt;]&lt;/span&gt;/&lt;span class="o"&gt;[&lt;/span&gt;REMOTE_DIR&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$&lt;span class="w"&gt; &lt;/span&gt;gsutil&lt;span class="w"&gt; &lt;/span&gt;-m&lt;span class="w"&gt; &lt;/span&gt;cp&lt;span class="w"&gt; &lt;/span&gt;-z&lt;span class="w"&gt; &lt;/span&gt;css,js,map&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;LOCAL_DIR&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;gs://&lt;span class="o"&gt;[&lt;/span&gt;BUCKET&lt;span class="o"&gt;]&lt;/span&gt;/&lt;span class="o"&gt;[&lt;/span&gt;REMOTE_DIR&lt;span class="o"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Let’s break it down:&lt;/p&gt;
 &lt;dl class="docutils"&gt;
@@ -70,7 +70,7 @@ the &lt;code&gt;-j&lt;/code&gt; option which only compresses files for the durat
 of the upload process and decompresses them at the destination).&lt;/p&gt;
 &lt;p class="last"&gt;Beyond compressing of the files, the command will also apply the required
 attributes to the stored files needed to properly serve them compressed
-&lt;a class="footnote-reference" href="#id7" id="id4"&gt;[3]&lt;/a&gt;. In our example, all CSS, JS and MAP files will be stored compressed
+&lt;a class="footnote-reference" href="#footnote-3" id="footnote-reference-3"&gt;[3]&lt;/a&gt;. In our example, all CSS, JS and MAP files will be stored compressed
 (using gzip).&lt;/p&gt;
 &lt;/dd&gt;
 &lt;dt&gt;&lt;code&gt;LOCAL_DIR&lt;/code&gt;&lt;/dt&gt;
@@ -105,24 +105,24 @@ it. 😉&lt;/p&gt;
 &lt;h2&gt;Further Reading&lt;/h2&gt;
 &lt;ul class="footnotes"&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id5"&gt;
-            &lt;a class="fn-backref" href="#id1"&gt;[1]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-1"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-1"&gt;[1]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://royal.pingdom.com/can-gzip-compression-really-improve-web-performance/"&gt;Can gzip Compression Really Improve Web Performance?&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id6"&gt;
-            &lt;a class="fn-backref" href="#id3"&gt;[2]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-2"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-2"&gt;[2]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://cloud.google.com/storage/docs/transcoding"&gt;Transcoding of gzip-compressed files&lt;/a&gt;
         &lt;/span&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class="docutils footnote" id="id7"&gt;
-            &lt;a class="fn-backref" href="#id4"&gt;[3]&lt;/a&gt;
+        &lt;span class="docutils footnote" id="footnote-3"&gt;
+            &lt;a class="fn-backref" href="#footnote-reference-3"&gt;[3]&lt;/a&gt;
         &lt;/span&gt;
         &lt;span&gt;
             &lt;a class="reference external" href="https://cloud.google.com/storage/docs/gsutil/commands/cp"&gt;gsutil cp command documentation&lt;/a&gt;
