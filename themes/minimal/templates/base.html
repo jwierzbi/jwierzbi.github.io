@@ -72,7 +72,7 @@
       </div>
       <div id="navbarMenu" class="navbar-menu">
         <div class="navbar-end">
-          <a class="navbar-item is-active" href="{{ SITEURL }}/">
+          <a class="navbar-item {% if page_name == 'index' %} is-active{% endif %}" href="{{ SITEURL }}/">
             Home
           </a>
 {% for title, link in MENUITEMS %}
