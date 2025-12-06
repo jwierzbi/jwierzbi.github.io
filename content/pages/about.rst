@@ -3,8 +3,9 @@ About me
 ========
 
 :slug: about
-:description: A short something about the author of https://jaro.blog. Come on
-              it, let me take your coat and let's get to know each other.
+:description: A short something about the author of https://blog.laobo.dev. \
+              Come on in, let me take your coat and let's get to know each \
+              other.
 
 .. raw:: html
 

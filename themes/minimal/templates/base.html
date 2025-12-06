@@ -39,7 +39,7 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description"
-        content="{% block description %}jaro.blog is a personal tech blog touching upon various more and less random subjects. Come on in, maybe you'll find something interesting for yourself.{% endblock description %}">
+        content="{% block description %}{{ SITENAME }} is a personal tech blog touching upon various more and less random subjects. Come on in, maybe you'll find something interesting for yourself.{% endblock description %}">
   <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
   <link rel="icon" href="{{ SITEURL }}/theme/img/favicon.ico"
@@ -60,7 +60,7 @@
     <div class="container">
       <div class="navbar-brand">
         <a class="navbar-item" href="{{ SITEURL }}/">
-          <img src="{{ SITEURL }}/theme/img/logo.png" alt="jaro.blog">
+          <img src="{{ SITEURL }}/theme/img/logo.png" alt="{{ SITENAME }}">
         </a>
         <span class="navbar-burger burger"
               data-target="navbarMenu"

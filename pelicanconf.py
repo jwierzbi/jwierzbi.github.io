@@ -3,8 +3,9 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'Jarosław Wierzbicki'
-SITENAME = 'jaro.blog'
-SITEURL = 'https://jaro.blog'
+SITENAME = 'blog.laobo.dev'
+# If your site is available via HTTPS, make sure SITEURL begins with https://
+SITEURL = 'https://blog.laobo.dev'
 
 PATH = 'content'
 ARTICLE_PATHS = ['blog']
