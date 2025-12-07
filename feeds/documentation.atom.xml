@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>jaro.blog - Documentation</title><link href="https://jaro.blog/" rel="alternate"></link><link href="https://jaro.blog/feeds/documentation.atom.xml" rel="self"></link><id>https://jaro.blog/</id><updated>2024-12-06T00:00:00+08:00</updated><entry><title>Conditional content removal using Docutils classes</title><link href="https://jaro.blog/blog/content-removal-with-docutils-classes.html" rel="alternate"></link><published>2021-06-07T00:00:00+08:00</published><updated>2024-12-06T00:00:00+08:00</updated><author><name>Jarosław Wierzbicki</name></author><id>tag:jaro.blog,2021-06-07:/blog/content-removal-with-docutils-classes.html</id><summary type="html">&lt;p&gt;Some time ago I had a problem where I had to exclude parts of one of my
+<feed xmlns="http://www.w3.org/2005/Atom"><title>blog.laobo.dev - Documentation</title><link href="https://blog.laobo.dev/" rel="alternate"/><link href="https://blog.laobo.dev/feeds/documentation.atom.xml" rel="self"/><id>https://blog.laobo.dev/</id><updated>2024-12-06T00:00:00+08:00</updated><entry><title>Conditional content removal using Docutils classes</title><link href="https://blog.laobo.dev/blog/content-removal-with-docutils-classes.html" rel="alternate"/><published>2021-06-07T00:00:00+08:00</published><updated>2024-12-06T00:00:00+08:00</updated><author><name>Jarosław Wierzbicki</name></author><id>tag:blog.laobo.dev,2021-06-07:/blog/content-removal-with-docutils-classes.html</id><summary type="html">&lt;p&gt;Some time ago I had a problem where I had to exclude parts of one of my
 documents based on a build-time condition. I wanted to maintain one document but
 produce two versions: one that contained internal details of a product and one
 that didn't.&lt;/p&gt;
@@ -513,4 +513,4 @@ and easy way to achieve the desired outcome when writing our documentation.&lt;/
     &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="Documentation"></category><category term="Docutils"></category><category term="documentation"></category><category term="reStructuredText"></category><category term="reST"></category></entry></feed>
+</content><category term="Documentation"/><category term="Docutils"/><category term="documentation"/><category term="reStructuredText"/><category term="reST"/></entry></feed>

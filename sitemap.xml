@@ -5,64 +5,64 @@ xmlns:xhtml="http://www.w3.org/1999/xhtml"
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>https://jaro.blog/</loc>
-<lastmod>2024-12-06T22:45:57-00:00</lastmod>
+<loc>https://blog.laobo.dev/</loc>
+<lastmod>2025-12-07T09:30:38-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://jaro.blog/archives.html</loc>
-<lastmod>2024-12-06T22:45:57-00:00</lastmod>
+<loc>https://blog.laobo.dev/archives.html</loc>
+<lastmod>2025-12-07T09:30:38-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://jaro.blog/authors.html</loc>
-<lastmod>2024-12-06T22:45:57-00:00</lastmod>
+<loc>https://blog.laobo.dev/authors.html</loc>
+<lastmod>2025-12-07T09:30:38-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://jaro.blog/blog/adb-in-wsl2.html</loc>
+<loc>https://blog.laobo.dev/blog/adb-in-wsl2.html</loc>
 <lastmod>2021-06-01T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://jaro.blog/blog/content-removal-with-docutils-classes.html</loc>
+<loc>https://blog.laobo.dev/blog/content-removal-with-docutils-classes.html</loc>
 <lastmod>2024-12-06T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://jaro.blog/blog/serve-gzip-files-from-gcs.html</loc>
+<loc>https://blog.laobo.dev/blog/serve-gzip-files-from-gcs.html</loc>
 <lastmod>2021-06-06T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://jaro.blog/categories.html</loc>
-<lastmod>2024-12-06T22:45:57-00:00</lastmod>
+<loc>https://blog.laobo.dev/categories.html</loc>
+<lastmod>2025-12-07T09:30:38-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://jaro.blog/pages/about.html</loc>
-<lastmod>2024-12-06T22:45:57-00:00</lastmod>
+<loc>https://blog.laobo.dev/pages/about.html</loc>
+<lastmod>2025-12-07T09:30:38-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>https://jaro.blog/tags.html</loc>
-<lastmod>2024-12-06T22:45:57-00:00</lastmod>
+<loc>https://blog.laobo.dev/tags.html</loc>
+<lastmod>2025-12-07T09:30:38-00:00</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>

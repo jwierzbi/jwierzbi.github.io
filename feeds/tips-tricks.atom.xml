@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>jaro.blog - Tips &amp; Tricks</title><link href="https://jaro.blog/" rel="alternate"></link><link href="https://jaro.blog/feeds/tips-tricks.atom.xml" rel="self"></link><id>https://jaro.blog/</id><updated>2021-06-01T00:00:00+08:00</updated><entry><title>Connecting to Android device from Windows Subsystem for Linux using ADB</title><link href="https://jaro.blog/blog/adb-in-wsl2.html" rel="alternate"></link><published>2021-06-01T00:00:00+08:00</published><updated>2021-06-01T00:00:00+08:00</updated><author><name>Jarosław Wierzbicki</name></author><id>tag:jaro.blog,2021-06-01:/blog/adb-in-wsl2.html</id><summary type="html">&lt;p&gt;A few weeks ago COVID-19 finally hit Taiwan (so far we've been doing pretty
+<feed xmlns="http://www.w3.org/2005/Atom"><title>blog.laobo.dev - Tips &amp; Tricks</title><link href="https://blog.laobo.dev/" rel="alternate"/><link href="https://blog.laobo.dev/feeds/tips-tricks.atom.xml" rel="self"/><id>https://blog.laobo.dev/</id><updated>2021-06-01T00:00:00+08:00</updated><entry><title>Connecting to Android device from Windows Subsystem for Linux using ADB</title><link href="https://blog.laobo.dev/blog/adb-in-wsl2.html" rel="alternate"/><published>2021-06-01T00:00:00+08:00</published><updated>2021-06-01T00:00:00+08:00</updated><author><name>Jarosław Wierzbicki</name></author><id>tag:blog.laobo.dev,2021-06-01:/blog/adb-in-wsl2.html</id><summary type="html">&lt;p&gt;A few weeks ago COVID-19 finally hit Taiwan (so far we've been doing pretty
 well) and I had to move to work from home like the rest of the world (well at
 least some of it). This forced me to use my work laptop for more than meetings.&lt;/p&gt;
 &lt;p&gt;Normally I use a Linux PC for daily work so to get at least some of the comfort
@@ -92,7 +92,7 @@ superfluous as the server by default starts on port &lt;code&gt;5037&lt;/code&gt
 it for clarity reasons.&lt;/p&gt;
 &lt;p&gt;The above might trigger a Windows firewall alert that will ask if we want to set
 up a rule for the ADB.&lt;/p&gt;
-&lt;img alt="Windows Defender Firewall dialog." src="https://jaro.blog/blog/images/windows_defender_dialog.png" /&gt;
+&lt;img alt="Windows Defender Firewall dialog." src="https://blog.laobo.dev/blog/images/windows_defender_dialog.png" /&gt;
 &lt;p&gt;From the perspective of accessing the ADB from WSL, it doesn't make much
 difference. If we allow the access then we'll be able to access the ADB server
 also from another computer on the network.&lt;/p&gt;
@@ -211,4 +211,4 @@ takes is to execute two commands.&lt;/p&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
-</content><category term="Tips &amp; Tricks"></category><category term="ADB"></category><category term="Android"></category><category term="Linux"></category><category term="Windows"></category><category term="WSL"></category><category term="WSL2"></category></entry></feed>
+</content><category term="Tips &amp; Tricks"/><category term="ADB"/><category term="Android"/><category term="Linux"/><category term="Windows"/><category term="WSL"/><category term="WSL2"/></entry></feed>
